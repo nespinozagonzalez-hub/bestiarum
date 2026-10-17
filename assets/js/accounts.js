@@ -24,12 +24,23 @@ window.GuildAccount=(()=>{
  }
  async function restore(){if(!session)return;try{const data=await request('state');emit(data);}catch(e){message(e.message);}}
  function message(t){const el=document.getElementById('accountFeedback');if(el)el.textContent=t;window.dispatchEvent(new CustomEvent('guild:account-message',{detail:t}));}
- function open(){const d=document.getElementById('accountDialog');if(!d)return;document.getElementById('accountInfo').textContent=session?'Sesión de '+session.username:'Entra o crea tu credencial para recuperar la crónica en otros dispositivos.';document.getElementById('accountForm').hidden=!!session;document.getElementById('accountActions').hidden=!session;document.getElementById('accountFeedback').textContent='';d.showModal();}
+ function open(){
+  const d=document.getElementById('accountDialog');if(!d)return;
+  for(const id of ['settingsDialog','guildMenu']){const el=document.getElementById(id);if(el?.open)el.close();}
+  document.getElementById('accountInfo').textContent=session?'Sesión de '+session.username:configured?'Tu usuario identifica tu crónica. Tu código personal de seis números permite recuperarla en otro dispositivo.':'Tu credencial entre dispositivos estará disponible cuando se abran los archivos del Gremio. Por ahora, tu aventura se guarda en este navegador.';
+  const form=document.getElementById('accountForm');form.hidden=!!session;
+  form.querySelectorAll('input,button[type="submit"]').forEach(el=>el.disabled=!configured);
+  document.getElementById('accountSetupNote').textContent=configured?'Recuerda tu usuario y tu código. Los códigos de los contratos se ingresan en el Tablón.':'Acceso preparado: usuario + código de 6 números. La conexión aún no está activada.';
+  document.getElementById('accountActions').hidden=!session;
+  document.getElementById('accountFeedback').textContent='';d.showModal();
+ }
+
  function install(){
-  const button=document.getElementById('accountButton');if(button)button.hidden=!configured;
+  const button=document.getElementById('accountButton');if(button)button.hidden=false;
   document.addEventListener('click',async e=>{
    const el=e.target.closest('[data-account]');if(!el)return;const action=el.dataset.account;
    if(action==='open'){open();return;}
+   if(action==='local'){document.getElementById('accountDialog').close();window.dispatchEvent(new CustomEvent('guild:local-entry'));return;}
    if(action==='close'){document.getElementById('accountDialog').close();return;}
    if(action==='logout'){
     try{await request('logout');session=null;status='local';persist();document.getElementById('accountDialog').close();window.dispatchEvent(new CustomEvent('guild:remote-logout'));notify();}catch(err){message(err.message);}return;
@@ -42,7 +53,7 @@ window.GuildAccount=(()=>{
   document.getElementById('accountForm')?.addEventListener('submit',async e=>{
    e.preventDefault();const form=e.currentTarget,action=e.submitter?.value==='register'?'register':'login',username=form.elements.username.value.trim(),pin=form.elements.pin.value;
    if(!/^[a-zA-Z0-9][a-zA-Z0-9_.-]{2,23}$/.test(username)||!/^\d{6}$/.test(pin)){message('Usa un usuario de 3 a 24 caracteres y una clave de seis dígitos.');return;}
-   if(busy)return;
+   if(busy)return;if(!configured){message('La conexión aún no está activada. Continúa con tu crónica local.');return;}
    try{const local=GuildStorage.load(),profile={player:local.player,avatar:local.avatar,origin:local.origin,specialty:BESTIARIUM.classes.find(c=>[c.id,c.name,c.legacy].includes(local.specialty))?.id||'rastreador'};const data=await request(action,{username,pin,profile});session={token:data.token,username:data.username,userId:data.userId,expires:data.expires,endpoint:url,state:data.state};persist();form.elements.pin.value='';document.getElementById('accountDialog').close();emit(data,'refugio');message('La Archivista Kael ha recuperado tu crónica.');}
    catch(err){message(err.message);}
   });

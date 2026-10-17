@@ -39,3 +39,7 @@ Referencias oficiales: [Aplicaciones web](https://developers.google.com/apps-scr
 ## Campaña 3.2
 
 El archivo completo incluye las reglas de narrativa, forja, equipo, talentos e investigaciones. No es necesario añadir pestañas: estos datos viven en `estado_json`. El faro cooperativo devuelve únicamente cifras agregadas del Gremio que comparte la hoja. Después de cambiar el script, publica una nueva versión del despliegue y conserva la URL `/exec` si actualizas el despliegue existente.
+
+## Interfaz 3.3 lista para conectar
+
+El acceso de usuario y código de seis números se ve desde la portada, el refugio y los ajustes. Hasta configurar `/exec`, los formularios indican que la conexión no está activada y permiten continuar localmente. La música, las ilustraciones y el lector funcionan sin Google. Esta ampliación mantiene las mismas cinco pestañas y las acciones de la campaña; usa el `Code.gs` completo actualizado de esta carpeta.

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-17T12:55:24.160Z",
+  "date": "2026-10-17T13:36:24.591Z",
   "method": "Interfaz y controlador conectados al servidor Apps Script simulado, sin tráfico a Google",
   "checks": [
     "Crear cuenta desde la interfaz recupera estado remoto y limpia la clave",

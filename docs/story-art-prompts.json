@@ -1,0 +1,59 @@
+{
+  "method": "Built-in image generation",
+  "style": "Dark fantasy graphic novel; charcoal green, slate, aged gold, copper and bone; wide 16:9; no lettering, border or watermark",
+  "assets": [
+    {
+      "id": "six-fires",
+      "scene": "Ancient grimoire overlooking six beacon fires and misty guild valley"
+    },
+    {
+      "id": "kael",
+      "scene": "Kael, a female archivist in her forties, dark braided hair streaked silver, weathered olive cloak and bronze clasp, standing by towering ancient bookshelves and a candlelit map table, holding an open letter. The guild library faces a misty mountain valley through high gothic windows. Warm candlelight, thoughtful serious expression, no readable writing."
+    },
+    {
+      "id": "oath",
+      "scene": "First person close view of a traveler's ungloved hand placed over a blackened iron seal on an ancient stone altar, six small amber braziers around it, a solemn oath ceremony inside the dark medieval guild hall, blue mist outside tall windows, glowing carved circular sigil, no readable writing."
+    },
+    {
+      "id": "iria",
+      "scene": "Iria, a young adult female explorer with short dark hair, weathered olive travel coat and a distinctive cobalt blue ribbon tied to her wrist, writing a letter with a quill beside a brass lantern in a ruined forest shelter. Close cinematic portrait plus hand and parchment, hopeful determined expression. No readable writing."
+    },
+    {
+      "id": "brann",
+      "scene": "Brann, a middle aged sturdy male blacksmith with dark beard and grey streaks, worn leather apron, soot on hands, studying a bronze casting of six interlinked hands next to an amber glowing forge under a mountain. Warm forge light, quiet emotion and craftsmanship, no readable writing."
+    },
+    {
+      "id": "guardian",
+      "scene": "A colossal gentle hybrid guardian with antlered bone crown, vast ragged wings and stone armored body kneels at an ancient circular altar. Six paths of amber light radiate from its shadow through a dark mountain valley. A lone small hooded hunter sets a bronze seal onto the altar. Hopeful resolution of a dark fantasy mystery, no violence."
+    },
+    {
+      "id": "flame",
+      "scene": "A blue ribbon on a brass lantern in foreground, a single seventh amber flame ignites above an ancient open grimoire in the guild refuge, six smaller embers circle it, distant silhouettes of an archivist, blacksmith and explorer reunited, misty mountain dawn beyond tall windows. Quiet triumphant hopeful ending, no readable writing."
+    },
+    {
+      "id": "pantano",
+      "scene": "A tiny old boat at a misty black swamp shore; a bronze bell tied to a cobalt blue ribbon lies on the boat. Six amber beacon reflections in dark still water. Ragged reeds, distant forgotten stone sanctuary, mysterious and solemn."
+    },
+    {
+      "id": "bosque",
+      "scene": "A hollow ancient tree forms a narrow wooden doorway in a ruined roofless chapel; cobalt blue threads hang from branches; a sealed letter rests among roots by a small oil lamp. Moonlight and mist, haunting quiet."
+    },
+    {
+      "id": "crater",
+      "scene": "An abandoned observatory with brass telescope aimed down into a deep crater; crystal needles hold faint reflections of six shadowy guardians; an explorer's weathered journal on a stone ledge. Midnight and faint starlight."
+    },
+    {
+      "id": "forja",
+      "scene": "A stone corridor deep under a mountain, warm amber light from a distant forge, a trail of ash footprints ends abruptly at a smooth warm stone wall marked with six interlinked hand shapes. Old blacksmith hammer on a ledge."
+    },
+    {
+      "id": "ruinas",
+      "scene": "A broken crown and a torn parchment page rest on an empty medieval stone throne, six faded circular sigils and one blank space on the page, bells fallen among ruined pillars and a small table laid for two in the courtyard beyond. No legible letters."
+    },
+    {
+      "id": "dominio",
+      "scene": "An immense ancient stone arch above a misty chasm; circular altar with six empty recesses for bronze seals in foreground. Beyond arch a barely visible huge serpentine dragon silhouette concealed in fog, identity hidden, only distant eyes and silhouette, no detailed features."
+    }
+  ],
+  "guardianRevision": "Final guardian preserves the dragon identity from assets/art/beast-quimerax.webp."
+}

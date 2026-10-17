@@ -29,6 +29,17 @@ var GuildCampaign=globalThis.GuildCampaign=(()=>{
   scene('IRIA · EXPLORADORA','Veintidós nombres ocupan las páginas. Iria vuelve al refugio con un farol sin encender. «Había una llama más. No la guardaba ninguna bestia».'),
   scene('EL GREMIO','Brann reúne las brasas de los seis territorios. Kael abre el primer grimorio: la última página nunca estuvo vacía. Esperaba el nombre de quien lograra reunirlas.'),
   scene('TU LEYENDA','La séptima llama prende en el refugio. No promete un mundo sin niebla. Promete que nadie volverá a cruzarla en soledad. Tu nombre queda escrito bajo el juramento.') ]});
+ // Scene art is presentation metadata: chapter IDs, gates and rewards are unchanged.
+ const voices={pantano:'iria',bosque:'kael',crater:'iria',forja:'brann',ruinas:'kael',dominio:'kael'};
+ chapters.forEach(ch=>{
+  let images;
+  if(ch.id==='prologo')images=['story/six-fires','story/kael','story/oath','story/iria'];
+  else if(ch.kind==='entry')images=['territory-'+ch.zone,'story/'+voices[ch.zone],'story/'+ch.zone];
+  else if(ch.kind==='closure')images=['story/'+ch.zone,'story/'+(ch.zone==='forja'?'brann':'kael'),ch.zone==='dominio'?'story/iria':ch.zone==='pantano'?'territory-bosque':ch.zone==='crater'?'story/six-fires':ch.zone==='forja'?'guild-refuge':'story/iria'];
+  else if(ch.id==='epilogo')images=['story/guardian','story/kael','story/oath'];
+  else images=['story/iria','story/brann','story/flame'];
+  ch.scenes.forEach((sc,i)=>{sc.image=images[i];sc.alt=ch.title+' · '+sc.voice.toLowerCase();});
+ });
  const recipes=[
   {id:'farol',name:'Farol del rastreador',slot:'mano',icon:'flame',cost:{'Fragmento Viral':1,'Muestra de Lab.':1},desc:'Ilumina una anotación oculta en las investigaciones.'},
   {id:'hoja',name:'Hoja de raíz',slot:'mano',icon:'sword',cost:{'Cadena Proteica':1,'Cristal de Bicapa':1},desc:'La marca de una expedición que regresó del bosque.'},

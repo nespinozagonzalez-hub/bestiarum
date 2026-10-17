@@ -1,4 +1,4 @@
-# Checklist de la remasterización · Bestiarium 3.2.1
+# Checklist de la remasterización · Bestiarium 3.3.0
 
 ## Implementación
 
@@ -82,3 +82,18 @@ Esta entrega conserva el ciclo original de cacería y captura. No incorpora cues
 - [x] Campaña revisada en navegador publicado: prólogo, captura, forja, pista y decisión recuperada tras recarga.
 - [x] Crónicas, lector y taller revisados a 320, 390 y 768 px en marcos del navegador, sin desbordamiento horizontal.
 - [x] Estado de continuidad en `docs/ESTADO.json`; Google real sigue pendiente.
+
+## Inmersión y navegación 3.3
+
+- [x] 46 escenas con imagen y sin repetir una imagen dentro del mismo capítulo.
+- [x] 13 ilustraciones narrativas nuevas, incluidas Kael, Brann, Iria y los seis hallazgos regionales.
+- [x] Lector inmersivo y vista de libro, texto regulable y página recordada.
+- [x] Botón de pantalla completa con lectura ampliada alternativa si el navegador la rechaza.
+- [x] Navegación con flechas y foco recuperado al pasar de página.
+- [x] Música original «Vigilia del Gremio», 64 segundos, en bucle; pausa y volumen.
+- [x] Estado de reproducción real: no se indica música activa si falla la reproducción.
+- [x] Usuario + código de seis números visible en portada, refugio y ajustes.
+- [x] Conexión pendiente indicada; no se crea una cuenta ficticia ni se guarda el código localmente.
+- [x] Origen ilustrado, tres primeros pasos y menú móvil para las nueve secciones.
+- [x] 62 comprobaciones automáticas aprobadas, incluidas diez de inmersión.
+- [ ] Comprobar visualmente el despliegue 3.3 y la reproducción real del archivo.
