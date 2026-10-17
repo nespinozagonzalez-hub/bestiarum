@@ -1,0 +1,1230 @@
+{
+  "CFG": {
+    "title": "Bestiarium: Cazadores de Anomalías",
+    "version": "V2.5 — Captura Cinemática Restaurada",
+    "teacherPin": "KAEL-2024",
+    "saveKey": "bestiariumV25"
+  },
+  "RANKS": [
+    {
+      "min": 0,
+      "rank": "E",
+      "title": "Recluta del Gremio"
+    },
+    {
+      "min": 100,
+      "rank": "D",
+      "title": "Rastreador Novato"
+    },
+    {
+      "min": 250,
+      "rank": "C",
+      "title": "Cazador Certificado"
+    },
+    {
+      "min": 450,
+      "rank": "B",
+      "title": "Veterano del Gremio"
+    },
+    {
+      "min": 700,
+      "rank": "A",
+      "title": "Maestro Cazador"
+    },
+    {
+      "min": 1000,
+      "rank": "S",
+      "title": "Leyenda del Gremio"
+    }
+  ],
+  "ZONES": [
+    {
+      "id": "pantano",
+      "name": "Pantano Infeccioso",
+      "icon": "☣",
+      "color": "rgba(56,184,112,.55)",
+      "glow": "rgba(56,184,112,.18)",
+      "desc": "Territorio de agentes infecciosos, defensas y señales de contagio."
+    },
+    {
+      "id": "bosque",
+      "name": "Bosque Celular",
+      "icon": "◌",
+      "color": "rgba(88,120,192,.55)",
+      "glow": "rgba(88,120,192,.18)",
+      "desc": "Región viva donde membranas, organelos y equilibrios celulares toman forma."
+    },
+    {
+      "id": "crater",
+      "name": "Cráter Genético",
+      "icon": "⌬",
+      "color": "rgba(136,80,192,.55)",
+      "glow": "rgba(136,80,192,.18)",
+      "desc": "Zona de hélices, mutaciones y mensajes moleculares inestables."
+    },
+    {
+      "id": "forja",
+      "name": "Forja Energética",
+      "icon": "⚡",
+      "color": "rgba(208,104,24,.55)",
+      "glow": "rgba(208,104,24,.18)",
+      "desc": "Dominio de ATP, metabolismo, fotosíntesis y transferencia de energía."
+    },
+    {
+      "id": "ruinas",
+      "name": "Ruinas del Cuerpo Humano",
+      "icon": "✚",
+      "color": "rgba(224,80,120,.52)",
+      "glow": "rgba(224,80,120,.18)",
+      "desc": "Archivo biológico de sistemas, desarrollo, señales hormonales y reproducción."
+    },
+    {
+      "id": "dominio",
+      "name": "Dominio de Quimerax",
+      "icon": "☽",
+      "color": "rgba(255,216,128,.52)",
+      "glow": "rgba(255,216,128,.22)",
+      "desc": "Zona final. Solo los cazadores que conecten evidencias de varias áreas podrán sellarla."
+    }
+  ],
+  "MONSTERS": [
+    {
+      "id": "virulox",
+      "name": "Virulox",
+      "icon": "🦠",
+      "type": "Anomalía Viral",
+      "typeKey": "viral",
+      "zone": "Pantano Infeccioso",
+      "threat": 2,
+      "habitat": "Muestras respiratorias, tejidos vulnerables y superficies de alto contacto.",
+      "weakness": "Diferenciar estructura viral de estructura bacteriana y comprender que necesita una célula huésped.",
+      "lore": "Virulox no ruge con sonido, sino con fiebre. Donde aparece, las células comienzan a obedecer órdenes ajenas. No vive: invade.",
+      "sessionCode": "GREMIO-PANTANO",
+      "captureCode": "NUCLEO-7",
+      "locked": true,
+      "reward": {
+        "xp": 50,
+        "mats": {
+          "Fragmento Viral": 2,
+          "Muestra de Lab.": 1,
+          "Sello de Rastreador": 1
+        }
+      },
+      "classHint": "Virus, estructura viral, prevención y diferencias con bacterias",
+      "missionBrief": "El Gremio detectó una anomalía que invade células y se multiplica usando recursos ajenos.",
+      "objective": "Identificar características de los virus y explicar por qué no responden a antibióticos.",
+      "evidence": [
+        "No posee estructura celular completa.",
+        "Necesita una célula huésped para multiplicarse.",
+        "Puede transmitirse mediante gotas o superficies contaminadas.",
+        "No se combate directamente con antibióticos."
+      ],
+      "parts": [
+        {
+          "name": "Cápside inestable",
+          "task": "Reconocer que un virus no es una célula completa."
+        },
+        {
+          "name": "Núcleo invasor",
+          "task": "Explicar cómo usa una célula huésped para replicarse."
+        },
+        {
+          "name": "Nube infecciosa",
+          "task": "Proponer medidas de prevención del contagio."
+        }
+      ],
+      "visualArchetype": "amorfo",
+      "palette": "viral_red",
+      "animationStyle": "pulse_spikes",
+      "zoneId": "pantano",
+      "art": "viral"
+    },
+    {
+      "id": "bacillus",
+      "name": "Bacillus Carmesí",
+      "icon": "🧫",
+      "type": "Anomalía Bacteriana",
+      "typeKey": "bacterial",
+      "zone": "Pantano Infeccioso",
+      "threat": 3,
+      "habitat": "Superficies contaminadas, heridas, alimentos mal manipulados y ambientes húmedos.",
+      "weakness": "Identificar estructuras bacterianas, reproducción por división celular y medidas de prevención.",
+      "lore": "Deja colonias como pequeñas fortalezas carmesíes. Su peligro crece cuando se subestima la higiene y el uso responsable de antibióticos.",
+      "sessionCode": "GREMIO-PANTANO",
+      "captureCode": "PARED-5",
+      "locked": true,
+      "reward": {
+        "xp": 60,
+        "mats": {
+          "Placa de Cultivo": 2,
+          "Coraza Bacteriana": 1,
+          "Muestra de Lab.": 1
+        }
+      },
+      "classHint": "Bacterias, estructura celular, colonias y resistencia bacteriana",
+      "missionBrief": "Una colonia carmesí avanza por superficies húmedas y fortalece su coraza bacteriana.",
+      "objective": "Distinguir bacterias de virus y explicar prácticas de prevención e higiene.",
+      "evidence": [
+        "Posee estructura celular propia.",
+        "Puede formar colonias visibles.",
+        "Se multiplica por división celular.",
+        "El mal uso de antibióticos puede favorecer resistencia."
+      ],
+      "parts": [
+        {
+          "name": "Coraza bacteriana",
+          "task": "Reconocer estructuras propias de una bacteria."
+        },
+        {
+          "name": "Colonia expansiva",
+          "task": "Explicar cómo se multiplican las bacterias."
+        },
+        {
+          "name": "Esporas resistentes",
+          "task": "Relacionar prevención, higiene y resistencia bacteriana."
+        }
+      ],
+      "visualArchetype": "bruto",
+      "palette": "bacterial_crimson",
+      "animationStyle": "heavy_breath",
+      "zoneId": "pantano",
+      "art": "bacterial"
+    },
+    {
+      "id": "micelombra",
+      "name": "Micelombra",
+      "icon": "🍄",
+      "type": "Anomalía Fúngica",
+      "typeKey": "fungal",
+      "zone": "Pantano Infeccioso",
+      "threat": 2,
+      "habitat": "Zonas húmedas, materia orgánica en descomposición, piel y superficies poco ventiladas.",
+      "weakness": "Reconocer características de los hongos, su reproducción por esporas y condiciones de crecimiento.",
+      "lore": "Micelombra crece en silencio. No ataca de frente: extiende filamentos invisibles hasta cubrir lo que parecía limpio.",
+      "sessionCode": "GREMIO-PANTANO",
+      "captureCode": "ESPORA-8",
+      "locked": true,
+      "reward": {
+        "xp": 55,
+        "mats": {
+          "Espora Sellada": 2,
+          "Filamento Fúngico": 1,
+          "Muestra de Lab.": 1
+        }
+      },
+      "classHint": "Hongos, esporas, humedad, prevención y condiciones de crecimiento",
+      "missionBrief": "El Gremio detectó filamentos oscuros extendiéndose por una zona húmeda.",
+      "objective": "Explicar cómo crecen los hongos y qué condiciones favorecen su desarrollo.",
+      "evidence": [
+        "Aparece en ambientes húmedos.",
+        "Libera esporas microscópicas.",
+        "Puede crecer sobre materia orgánica.",
+        "Sus filamentos se extienden bajo la superficie."
+      ],
+      "parts": [
+        {
+          "name": "Sombrero sombrío",
+          "task": "Identificar el rol de las esporas."
+        },
+        {
+          "name": "Red de micelio",
+          "task": "Explicar cómo se extienden los hongos."
+        },
+        {
+          "name": "Nube de humedad",
+          "task": "Relacionar humedad y ventilación con prevención."
+        }
+      ],
+      "visualArchetype": "amorfo",
+      "palette": "fungal_green",
+      "animationStyle": "spore_drift",
+      "zoneId": "pantano",
+      "art": "fungal"
+    },
+    {
+      "id": "parasitrox",
+      "name": "Parasitrox",
+      "icon": "🪱",
+      "type": "Anomalía Parasitaria",
+      "typeKey": "parasite",
+      "zone": "Pantano Infeccioso",
+      "threat": 3,
+      "habitat": "Organismos huéspedes, aguas contaminadas, alimentos mal lavados y ambientes con baja higiene.",
+      "weakness": "Comprender la relación parásito-huésped y las rutas de transmisión.",
+      "lore": "Parasitrox no busca territorio propio: busca un huésped. Donde entra, consume en silencio y deja señales difíciles de rastrear.",
+      "sessionCode": "GREMIO-PANTANO",
+      "captureCode": "HUESPED-4",
+      "locked": true,
+      "reward": {
+        "xp": 65,
+        "mats": {
+          "Garra Parasitaria": 1,
+          "Toxina Neutralizada": 2,
+          "Muestra de Lab.": 1
+        }
+      },
+      "classHint": "Parásitos, huésped, transmisión y medidas preventivas",
+      "missionBrief": "Una criatura alargada fue detectada siguiendo rastros de posibles huéspedes.",
+      "objective": "Explicar qué es un parásito, cómo se transmite y cómo se puede prevenir.",
+      "evidence": [
+        "Depende de otro organismo para obtener recursos.",
+        "Puede transmitirse por agua o alimentos contaminados.",
+        "Produce daño al huésped.",
+        "La higiene y el saneamiento reducen el riesgo."
+      ],
+      "parts": [
+        {
+          "name": "Mandíbula huésped",
+          "task": "Definir la relación entre parásito y huésped."
+        },
+        {
+          "name": "Cola infiltrante",
+          "task": "Identificar rutas de transmisión."
+        },
+        {
+          "name": "Toxina oculta",
+          "task": "Proponer medidas de prevención."
+        }
+      ],
+      "visualArchetype": "serpentino",
+      "palette": "parasite_swamp",
+      "animationStyle": "serpent_wave",
+      "zoneId": "pantano",
+      "art": "parasite"
+    },
+    {
+      "id": "vacunara",
+      "name": "Vacunara",
+      "icon": "🛡️",
+      "type": "Anomalía Inmunológica",
+      "typeKey": "body",
+      "zone": "Pantano Infeccioso",
+      "threat": 3,
+      "habitat": "Archivos inmunes, memoria celular y zonas donde el organismo reconoce invasores.",
+      "weakness": "Comprender la respuesta inmune, memoria inmunológica y función de las vacunas.",
+      "lore": "Vacunara no es enemiga ni aliada: es una guardiana incompleta. Solo despierta cuando el organismo aprende a recordar al invasor.",
+      "sessionCode": "GREMIO-PANTANO",
+      "captureCode": "MEMORIA-12",
+      "locked": true,
+      "reward": {
+        "xp": 70,
+        "mats": {
+          "Sello Inmune": 2,
+          "Memoria Celular": 1,
+          "Fragmento Viral": 1
+        }
+      },
+      "classHint": "Sistema inmune, vacunas, memoria inmunológica y prevención",
+      "missionBrief": "Una guardiana del Pantano se activó tras reconocer rastros de antiguos invasores.",
+      "objective": "Explicar cómo las vacunas preparan al sistema inmune para responder ante una infección.",
+      "evidence": [
+        "El cuerpo puede recordar antígenos.",
+        "Las vacunas preparan una respuesta defensiva.",
+        "La inmunidad reduce riesgos graves.",
+        "La memoria inmunológica permite respuestas más rápidas."
+      ],
+      "parts": [
+        {
+          "name": "Escudo antigénico",
+          "task": "Explicar qué reconoce el sistema inmune."
+        },
+        {
+          "name": "Memoria latente",
+          "task": "Relacionar vacuna y memoria inmunológica."
+        },
+        {
+          "name": "Sello protector",
+          "task": "Argumentar por qué la prevención protege a la comunidad."
+        }
+      ],
+      "visualArchetype": "humanoide",
+      "palette": "immune_gold",
+      "animationStyle": "shield_pulse",
+      "zoneId": "pantano",
+      "art": "body"
+    },
+    {
+      "id": "osmogarra",
+      "name": "Osmogarra",
+      "icon": "🧬",
+      "type": "Anomalía Celular",
+      "typeKey": "cellular",
+      "zone": "Bosque Celular",
+      "threat": 3,
+      "habitat": "Células expuestas a cambios bruscos de concentración y ambientes osmóticos inestables.",
+      "weakness": "Comprender membrana plasmática, transporte pasivo, transporte activo y equilibrio celular.",
+      "lore": "Osmogarra aparece cuando el equilibrio celular se rompe. Se expande, se contrae y deja ondas en cada frontera de la célula.",
+      "sessionCode": "GREMIO-CELULA",
+      "captureCode": "BICAPA-9",
+      "locked": true,
+      "reward": {
+        "xp": 70,
+        "mats": {
+          "Cristal de Bicapa": 2,
+          "Proteína Canal": 1,
+          "Núcleo de Equilibrio": 1
+        }
+      },
+      "classHint": "Membrana celular, transporte pasivo, activo y ósmosis",
+      "missionBrief": "Una anomalía altera el paso de sustancias a través de la membrana celular.",
+      "objective": "Distinguir transporte pasivo y activo, y explicar cómo la membrana regula el intercambio.",
+      "evidence": [
+        "Algunas sustancias cruzan sin gasto de energía.",
+        "Otras requieren proteínas y ATP.",
+        "El agua puede moverse según la concentración.",
+        "El equilibrio celular depende del intercambio controlado."
+      ],
+      "parts": [
+        {
+          "name": "Membrana alterada",
+          "task": "Reconocer la función de la membrana plasmática."
+        },
+        {
+          "name": "Canal proteico",
+          "task": "Diferenciar transporte pasivo y activo."
+        },
+        {
+          "name": "Núcleo de equilibrio",
+          "task": "Explicar ósmosis y cambios de concentración."
+        }
+      ],
+      "visualArchetype": "amorfo",
+      "palette": "cellular_cyan",
+      "animationStyle": "osmotic_breathe",
+      "zoneId": "bosque",
+      "art": "cellular"
+    },
+    {
+      "id": "ribosomor",
+      "name": "Ribosomor",
+      "icon": "⚙️",
+      "type": "Anomalía Ribosomal",
+      "typeKey": "cellular",
+      "zone": "Bosque Celular",
+      "threat": 2,
+      "habitat": "Citoplasma, retículo endoplasmático rugoso y rutas de síntesis proteica.",
+      "weakness": "Comprender la función de los ribosomas en la síntesis de proteínas.",
+      "lore": "Ribosomor golpea como un herrero diminuto. Cada impacto une piezas invisibles hasta formar cadenas esenciales para la vida.",
+      "sessionCode": "GREMIO-CELULA",
+      "captureCode": "PROTEINA-6",
+      "locked": true,
+      "reward": {
+        "xp": 55,
+        "mats": {
+          "Cadena Proteica": 2,
+          "Engranaje Ribosomal": 1,
+          "Muestra de Lab.": 1
+        }
+      },
+      "classHint": "Ribosomas, proteínas y síntesis proteica",
+      "missionBrief": "Una criatura insectoide trabaja sin descanso ensamblando cadenas proteicas.",
+      "objective": "Explicar qué hacen los ribosomas y por qué las proteínas son esenciales.",
+      "evidence": [
+        "Participa en la fabricación de proteínas.",
+        "Puede encontrarse libre o asociado al retículo endoplasmático.",
+        "Traduce información para formar cadenas de aminoácidos.",
+        "Sus productos cumplen funciones estructurales y funcionales."
+      ],
+      "parts": [
+        {
+          "name": "Martillo ribosomal",
+          "task": "Identificar la función de los ribosomas."
+        },
+        {
+          "name": "Cadena naciente",
+          "task": "Relacionar aminoácidos y proteínas."
+        },
+        {
+          "name": "Forja citoplasmática",
+          "task": "Ubicar dónde ocurre la síntesis proteica."
+        }
+      ],
+      "visualArchetype": "insectoide",
+      "palette": "ribosome_blue",
+      "animationStyle": "rapid_arms",
+      "zoneId": "bosque",
+      "art": "cellular"
+    },
+    {
+      "id": "lisombra",
+      "name": "Lisombra",
+      "icon": "🫧",
+      "type": "Anomalía Lisosomal",
+      "typeKey": "cellular",
+      "zone": "Bosque Celular",
+      "threat": 2,
+      "habitat": "Vesículas digestivas, restos celulares y zonas de reciclaje interno.",
+      "weakness": "Comprender el rol de los lisosomas en digestión celular y reciclaje.",
+      "lore": "Lisombra no destruye por maldad: descompone lo viejo, lo dañado y lo inútil. Su ácido es oscuro, pero necesario.",
+      "sessionCode": "GREMIO-CELULA",
+      "captureCode": "ACIDO-11",
+      "locked": true,
+      "reward": {
+        "xp": 55,
+        "mats": {
+          "Enzima Ácida": 2,
+          "Vesícula Sellada": 1,
+          "Núcleo de Equilibrio": 1
+        }
+      },
+      "classHint": "Lisosomas, digestión celular, enzimas y reciclaje",
+      "missionBrief": "Una masa ácida recorre el Bosque Celular descomponiendo restos internos.",
+      "objective": "Explicar cómo los lisosomas degradan sustancias y reciclan componentes celulares.",
+      "evidence": [
+        "Contiene enzimas digestivas.",
+        "Participa en la degradación de desechos celulares.",
+        "Puede reciclar materiales internos.",
+        "Su función ayuda a mantener el orden celular."
+      ],
+      "parts": [
+        {
+          "name": "Núcleo ácido",
+          "task": "Explicar qué contienen los lisosomas."
+        },
+        {
+          "name": "Vesícula corrosiva",
+          "task": "Relacionar lisosomas y digestión celular."
+        },
+        {
+          "name": "Restos reciclados",
+          "task": "Reconocer el valor del reciclaje celular."
+        }
+      ],
+      "visualArchetype": "amorfo",
+      "palette": "lysosome_acid",
+      "animationStyle": "bubble_decay",
+      "zoneId": "bosque",
+      "art": "cellular"
+    },
+    {
+      "id": "nucleara",
+      "name": "Nucleara",
+      "icon": "🔵",
+      "type": "Anomalía Nuclear",
+      "typeKey": "cellular",
+      "zone": "Bosque Celular",
+      "threat": 4,
+      "habitat": "Centro de control celular, envoltura nuclear y regiones con información genética protegida.",
+      "weakness": "Comprender la función del núcleo como centro de control e información celular.",
+      "lore": "Nucleara custodia el archivo central. No ataca primero; observa. Pero si el núcleo cae, toda la célula pierde dirección.",
+      "sessionCode": "GREMIO-CELULA",
+      "captureCode": "NUCLEO-21",
+      "locked": true,
+      "reward": {
+        "xp": 85,
+        "mats": {
+          "Fragmento Nuclear": 2,
+          "Sello de Control": 1,
+          "Cadena de ADN": 1
+        }
+      },
+      "classHint": "Núcleo celular, ADN, control celular y envoltura nuclear",
+      "missionBrief": "Una guardiana del Bosque protege el archivo central de instrucciones celulares.",
+      "objective": "Explicar por qué el núcleo dirige funciones celulares y resguarda información genética.",
+      "evidence": [
+        "Contiene material genético.",
+        "Coordina actividades celulares.",
+        "Está rodeado por una envoltura nuclear.",
+        "Su información permite regular procesos internos."
+      ],
+      "parts": [
+        {
+          "name": "Corona nuclear",
+          "task": "Reconocer el núcleo como centro de control."
+        },
+        {
+          "name": "Archivo genético",
+          "task": "Relacionar núcleo y ADN."
+        },
+        {
+          "name": "Envoltura sellada",
+          "task": "Explicar la protección del material genético."
+        }
+      ],
+      "visualArchetype": "humanoide",
+      "palette": "nuclear_blue",
+      "animationStyle": "orbital_aura",
+      "zoneId": "bosque",
+      "art": "cellular"
+    },
+    {
+      "id": "cromavorax",
+      "name": "Cromavorax",
+      "icon": "🧬",
+      "type": "Anomalía Genética",
+      "typeKey": "genetic",
+      "zone": "Cráter Genético",
+      "threat": 4,
+      "habitat": "Núcleos celulares con material genético expuesto y regiones de alta replicación.",
+      "weakness": "Diferenciar ADN y ARN, y comprender la estructura de la información genética.",
+      "lore": "Se alimenta de información genética. Sus garras desordenan las bases nitrogenadas y dejan hélices incompletas a su paso.",
+      "sessionCode": "GREMIO-GEN",
+      "captureCode": "HELIX-3",
+      "locked": true,
+      "reward": {
+        "xp": 90,
+        "mats": {
+          "Fragmento de ADN": 2,
+          "Cadena de ARN": 2,
+          "Muestra de Lab.": 1
+        }
+      },
+      "classHint": "ADN, ARN, bases nitrogenadas y estructura genética",
+      "missionBrief": "Una criatura serpentina devora cadenas de información genética en el Cráter.",
+      "objective": "Comparar ADN y ARN, reconociendo su estructura y función.",
+      "evidence": [
+        "La información genética se organiza en secuencias.",
+        "El ADN y el ARN cumplen funciones relacionadas, pero distintas.",
+        "Las bases nitrogenadas forman parte del código.",
+        "La estructura molecular permite conservar y transmitir información."
+      ],
+      "parts": [
+        {
+          "name": "Doble hélice rota",
+          "task": "Reconocer la estructura del ADN."
+        },
+        {
+          "name": "Garra de bases",
+          "task": "Identificar el rol de las bases nitrogenadas."
+        },
+        {
+          "name": "Cadena mensajera",
+          "task": "Diferenciar ADN y ARN."
+        }
+      ],
+      "visualArchetype": "serpentino",
+      "palette": "genetic_violet",
+      "animationStyle": "helix_twist",
+      "zoneId": "crater",
+      "art": "genetic"
+    },
+    {
+      "id": "helicassa",
+      "name": "Helicassa",
+      "icon": "🦂",
+      "type": "Anomalía Replicadora",
+      "typeKey": "genetic",
+      "zone": "Cráter Genético",
+      "threat": 4,
+      "habitat": "Zonas donde el ADN se abre, copia y duplica antes de la división celular.",
+      "weakness": "Comprender la replicación del ADN y la importancia de copiar correctamente la información.",
+      "lore": "Helicassa abre las cadenas como si fueran puertas antiguas. Donde sus pinzas fallan, aparecen copias incompletas.",
+      "sessionCode": "GREMIO-GEN",
+      "captureCode": "COPIA-18",
+      "locked": true,
+      "reward": {
+        "xp": 90,
+        "mats": {
+          "Hélice Duplicada": 2,
+          "Enzima Replicante": 1,
+          "Fragmento de ADN": 1
+        }
+      },
+      "classHint": "Replicación del ADN, copia de información y errores de replicación",
+      "missionBrief": "Una mantis dracónica abre cadenas genéticas para duplicarlas, pero deja errores si no se la contiene.",
+      "objective": "Explicar la replicación del ADN y su importancia para la continuidad celular.",
+      "evidence": [
+        "El ADN debe copiarse antes de la división celular.",
+        "La copia debe conservar la información original.",
+        "Errores en la copia pueden generar alteraciones.",
+        "Las enzimas participan en el proceso de replicación."
+      ],
+      "parts": [
+        {
+          "name": "Pinzas replicantes",
+          "task": "Explicar por qué el ADN debe copiarse."
+        },
+        {
+          "name": "Cadena molde",
+          "task": "Reconocer la idea de molde complementario."
+        },
+        {
+          "name": "Error latente",
+          "task": "Relacionar fallas de copia con alteraciones genéticas."
+        }
+      ],
+      "visualArchetype": "insectoide",
+      "palette": "replication_purple",
+      "animationStyle": "claw_open",
+      "zoneId": "crater",
+      "art": "genetic"
+    },
+    {
+      "id": "mutagenoalfa",
+      "name": "Mutágeno Alfa",
+      "icon": "☣️",
+      "type": "Anomalía Mutante",
+      "typeKey": "genetic",
+      "zone": "Cráter Genético",
+      "threat": 5,
+      "habitat": "Regiones expuestas a agentes mutágenos, radiación, sustancias químicas o errores de copia.",
+      "weakness": "Comprender qué es una mutación, sus posibles causas y efectos.",
+      "lore": "Mutágeno Alfa nunca conserva la misma forma. Cada error lo transforma, cada cambio lo fortalece o lo debilita.",
+      "sessionCode": "GREMIO-GEN",
+      "captureCode": "MUTA-404",
+      "locked": true,
+      "reward": {
+        "xp": 110,
+        "mats": {
+          "Fragmento Mutante": 2,
+          "Gen Alterado": 1,
+          "Toxina Neutralizada": 1
+        }
+      },
+      "classHint": "Mutaciones, causas, efectos y variabilidad genética",
+      "missionBrief": "Una criatura asimétrica cambia de forma cada vez que se altera una secuencia genética.",
+      "objective": "Explicar qué son las mutaciones y distinguir posibles causas y consecuencias.",
+      "evidence": [
+        "Una mutación es un cambio en la información genética.",
+        "Puede surgir por errores o agentes externos.",
+        "No toda mutación tiene el mismo efecto.",
+        "Algunas mutaciones pueden ser perjudiciales, neutras o beneficiosas."
+      ],
+      "parts": [
+        {
+          "name": "Brazo deformado",
+          "task": "Definir qué es una mutación."
+        },
+        {
+          "name": "Núcleo inestable",
+          "task": "Identificar causas posibles."
+        },
+        {
+          "name": "Marca variable",
+          "task": "Analizar efectos de una mutación."
+        }
+      ],
+      "visualArchetype": "bruto",
+      "palette": "mutant_magenta",
+      "animationStyle": "glitch_spasm",
+      "zoneId": "crater",
+      "art": "bacterial"
+    },
+    {
+      "id": "transcriptor",
+      "name": "Transcriptor",
+      "icon": "🪶",
+      "type": "Anomalía Transcripcional",
+      "typeKey": "genetic",
+      "zone": "Cráter Genético",
+      "threat": 3,
+      "habitat": "Núcleos activos donde la información del ADN se convierte en mensajes de ARN.",
+      "weakness": "Comprender la transcripción como paso desde ADN hacia ARN mensajero.",
+      "lore": "Transcriptor escribe con alas de pergamino. Cada trazo copia una orden del archivo genético para enviarla fuera del núcleo.",
+      "sessionCode": "GREMIO-GEN",
+      "captureCode": "ARN-22",
+      "locked": true,
+      "reward": {
+        "xp": 75,
+        "mats": {
+          "Cadena de ARN": 2,
+          "Pluma Transcripta": 1,
+          "Sello de Control": 1
+        }
+      },
+      "classHint": "Transcripción, ARN mensajero y flujo de información genética",
+      "missionBrief": "Un escriba insectoide copia instrucciones genéticas en mensajes móviles.",
+      "objective": "Explicar la transcripción y su relación con la síntesis de proteínas.",
+      "evidence": [
+        "La información del ADN puede copiarse en ARN.",
+        "El ARN mensajero lleva instrucciones hacia la síntesis proteica.",
+        "La transcripción ocurre en relación con el núcleo.",
+        "El flujo de información genética permite producir proteínas."
+      ],
+      "parts": [
+        {
+          "name": "Pluma de ARN",
+          "task": "Explicar qué se forma durante la transcripción."
+        },
+        {
+          "name": "Ala de pergamino",
+          "task": "Relacionar ADN y ARN mensajero."
+        },
+        {
+          "name": "Mensaje liberado",
+          "task": "Conectar transcripción con síntesis proteica."
+        }
+      ],
+      "visualArchetype": "insectoide",
+      "palette": "transcript_ink",
+      "animationStyle": "rune_wings",
+      "zoneId": "crater",
+      "art": "genetic"
+    },
+    {
+      "id": "mitocrix",
+      "name": "Mitocrix",
+      "icon": "⚡",
+      "type": "Anomalía Energética",
+      "typeKey": "energy",
+      "zone": "Forja Energética",
+      "threat": 4,
+      "habitat": "Mitocondrias alteradas, tejidos musculares activos y zonas de alta demanda energética.",
+      "weakness": "Comprender respiración celular, mitocondria y producción de ATP.",
+      "lore": "Pulsa con energía robada. Cada ráfaga de luz es ATP consumido de una célula viva.",
+      "sessionCode": "GREMIO-ENERGIA",
+      "captureCode": "ATP-42",
+      "locked": true,
+      "reward": {
+        "xp": 85,
+        "mats": {
+          "Fragmento de ATP": 3,
+          "Cristal Mitocondrial": 1,
+          "Muestra de Lab.": 1
+        }
+      },
+      "classHint": "Mitocondria, respiración celular y ATP",
+      "missionBrief": "Una bestia de pecho luminoso consume energía celular y libera chispas de ATP.",
+      "objective": "Explicar el rol de la mitocondria en la producción de energía celular.",
+      "evidence": [
+        "La célula requiere energía para funcionar.",
+        "La mitocondria participa en la producción de ATP.",
+        "La respiración celular transforma nutrientes en energía utilizable.",
+        "Los tejidos activos demandan más energía."
+      ],
+      "parts": [
+        {
+          "name": "Núcleo de ATP",
+          "task": "Relacionar ATP con energía celular."
+        },
+        {
+          "name": "Cristal mitocondrial",
+          "task": "Identificar la función de la mitocondria."
+        },
+        {
+          "name": "Chispa metabólica",
+          "task": "Explicar la respiración celular."
+        }
+      ],
+      "visualArchetype": "bruto",
+      "palette": "energy_amber",
+      "animationStyle": "core_spark",
+      "zoneId": "forja",
+      "art": "energy"
+    },
+    {
+      "id": "clorofang",
+      "name": "Clorofang",
+      "icon": "🌿",
+      "type": "Anomalía Fotosintética",
+      "typeKey": "energy",
+      "zone": "Forja Energética",
+      "threat": 3,
+      "habitat": "Tejidos vegetales, hojas expuestas a luz y estructuras con cloroplastos activos.",
+      "weakness": "Comprender fotosíntesis, clorofila, luz, agua, dióxido de carbono y glucosa.",
+      "lore": "Clorofang abre sus crestas al sol. Sus colmillos verdes no devoran carne: devoran luz.",
+      "sessionCode": "GREMIO-ENERGIA",
+      "captureCode": "LUZ-15",
+      "locked": true,
+      "reward": {
+        "xp": 75,
+        "mats": {
+          "Núcleo Clorofílico": 2,
+          "Hoja Lumínica": 1,
+          "Catalizador Energético": 1
+        }
+      },
+      "classHint": "Fotosíntesis, cloroplastos, glucosa y oxígeno",
+      "missionBrief": "Un wyvern vegetal absorbe luz y libera energía almacenada en tejidos verdes.",
+      "objective": "Explicar el proceso general de la fotosíntesis y sus reactantes/productos.",
+      "evidence": [
+        "Requiere luz.",
+        "Usa agua y dióxido de carbono.",
+        "Produce glucosa y oxígeno.",
+        "Ocurre en estructuras vegetales con clorofila."
+      ],
+      "parts": [
+        {
+          "name": "Cresta foliar",
+          "task": "Reconocer el rol de la luz."
+        },
+        {
+          "name": "Núcleo clorofílico",
+          "task": "Explicar la función de la clorofila."
+        },
+        {
+          "name": "Aliento de oxígeno",
+          "task": "Identificar productos de la fotosíntesis."
+        }
+      ],
+      "visualArchetype": "wyvern",
+      "palette": "chlorophyll_green",
+      "animationStyle": "leaf_wing",
+      "zoneId": "forja",
+      "art": "energy"
+    },
+    {
+      "id": "glucolixrex",
+      "name": "Glucólix Rex",
+      "icon": "🔥",
+      "type": "Anomalía Metabólica",
+      "typeKey": "energy",
+      "zone": "Forja Energética",
+      "threat": 4,
+      "habitat": "Rutas metabólicas, citoplasma activo y regiones donde la glucosa comienza a degradarse.",
+      "weakness": "Comprender la degradación de glucosa y su relación con la obtención de energía.",
+      "lore": "Glucólix Rex avanza como una caldera viva. Donde pisa, la glucosa se rompe y el calor del metabolismo se enciende.",
+      "sessionCode": "GREMIO-ENERGIA",
+      "captureCode": "GLUCO-10",
+      "locked": true,
+      "reward": {
+        "xp": 85,
+        "mats": {
+          "Fragmento de Glucosa": 2,
+          "Chispa Metabólica": 2,
+          "Fragmento de ATP": 1
+        }
+      },
+      "classHint": "Glucosa, metabolismo, respiración celular y energía",
+      "missionBrief": "Un lagarto ígneo industrial fragmenta glucosa para liberar energía.",
+      "objective": "Relacionar glucosa, metabolismo y obtención de ATP.",
+      "evidence": [
+        "La glucosa es una fuente de energía.",
+        "Las rutas metabólicas transforman moléculas.",
+        "El proceso libera energía utilizable.",
+        "La respiración celular incluye etapas conectadas."
+      ],
+      "parts": [
+        {
+          "name": "Mandíbula glucídica",
+          "task": "Reconocer la glucosa como fuente energética."
+        },
+        {
+          "name": "Caldera metabólica",
+          "task": "Explicar transformación de moléculas."
+        },
+        {
+          "name": "Garra de ATP",
+          "task": "Relacionar metabolismo y ATP."
+        }
+      ],
+      "visualArchetype": "bruto",
+      "palette": "metabolic_fire",
+      "animationStyle": "smoke_heat",
+      "zoneId": "forja",
+      "art": "energy"
+    },
+    {
+      "id": "termovolt",
+      "name": "Termovolt",
+      "icon": "⚡",
+      "type": "Anomalía Termoeléctrica",
+      "typeKey": "energy",
+      "zone": "Forja Energética",
+      "threat": 4,
+      "habitat": "Sistemas donde la energía se transforma, transfiere o disipa como calor y electricidad.",
+      "weakness": "Comprender transformación y transferencia de energía.",
+      "lore": "Termovolt no camina: descarga. Su armadura vibra entre calor, chispa y movimiento.",
+      "sessionCode": "GREMIO-ENERGIA",
+      "captureCode": "VOLTA-30",
+      "locked": true,
+      "reward": {
+        "xp": 85,
+        "mats": {
+          "Núcleo Voltaico": 2,
+          "Placa Térmica": 1,
+          "Catalizador Energético": 1
+        }
+      },
+      "classHint": "Transferencia de energía, calor, electricidad y transformación energética",
+      "missionBrief": "Una bestia blindada libera pulsos de calor y corriente entre sus placas.",
+      "objective": "Explicar cómo la energía puede transformarse y transferirse en distintos sistemas.",
+      "evidence": [
+        "La energía puede cambiar de forma.",
+        "El calor es una forma de transferencia de energía.",
+        "La electricidad puede producir movimiento, luz o calor.",
+        "Los sistemas energéticos no siempre son 100% eficientes."
+      ],
+      "parts": [
+        {
+          "name": "Placa térmica",
+          "task": "Reconocer el calor como transferencia de energía."
+        },
+        {
+          "name": "Núcleo voltaico",
+          "task": "Relacionar electricidad y transformación energética."
+        },
+        {
+          "name": "Armadura conductora",
+          "task": "Analizar pérdidas o disipación de energía."
+        }
+      ],
+      "visualArchetype": "bruto",
+      "palette": "thermal_electric",
+      "animationStyle": "electric_pulse",
+      "zoneId": "forja",
+      "art": "energy"
+    },
+    {
+      "id": "hormonarca",
+      "name": "Hormonarca",
+      "icon": "👑",
+      "type": "Anomalía Hormonal",
+      "typeKey": "body",
+      "zone": "Ruinas del Cuerpo Humano",
+      "threat": 4,
+      "habitat": "Glándulas endocrinas, señales químicas y sistemas reguladores del organismo.",
+      "weakness": "Comprender que las hormonas actúan como mensajeros químicos que regulan funciones corporales.",
+      "lore": "Hormonarca gobierna sin tocar. Envía órdenes invisibles por la sangre y cambia el ritmo de todo el cuerpo.",
+      "sessionCode": "GREMIO-CUERPO",
+      "captureCode": "ENDO-5",
+      "locked": true,
+      "reward": {
+        "xp": 85,
+        "mats": {
+          "Sello Hormonal": 2,
+          "Cristal Endocrino": 1,
+          "Pulso Regulador": 1
+        }
+      },
+      "classHint": "Sistema endocrino, hormonas, glándulas y regulación corporal",
+      "missionBrief": "Una figura regia altera señales internas y desordena la comunicación hormonal.",
+      "objective": "Explicar la función de las hormonas y su relación con glándulas y órganos blanco.",
+      "evidence": [
+        "Las hormonas viajan como mensajeros químicos.",
+        "Son producidas por glándulas.",
+        "Actúan sobre órganos o tejidos específicos.",
+        "Regulan procesos como crecimiento, metabolismo o reproducción."
+      ],
+      "parts": [
+        {
+          "name": "Corona endocrina",
+          "task": "Definir qué son las hormonas."
+        },
+        {
+          "name": "Mano reguladora",
+          "task": "Relacionar glándulas y órganos blanco."
+        },
+        {
+          "name": "Pulso químico",
+          "task": "Explicar regulación corporal."
+        }
+      ],
+      "visualArchetype": "humanoide",
+      "palette": "hormonal_wine",
+      "animationStyle": "royal_aura",
+      "zoneId": "ruinas",
+      "art": "body"
+    },
+    {
+      "id": "gametrix",
+      "name": "Gametrix",
+      "icon": "🌀",
+      "type": "Anomalía Gamética",
+      "typeKey": "body",
+      "zone": "Ruinas del Cuerpo Humano",
+      "threat": 3,
+      "habitat": "Rutas reproductivas, gametos y procesos asociados a fecundación.",
+      "weakness": "Comprender la función de gametos y el proceso general de fecundación.",
+      "lore": "Gametrix no es una criatura única, sino dos fuerzas girando hacia un mismo punto. Cuando convergen, comienza una nueva historia biológica.",
+      "sessionCode": "GREMIO-CUERPO",
+      "captureCode": "GAMETO-2",
+      "locked": true,
+      "reward": {
+        "xp": 70,
+        "mats": {
+          "Núcleo Gamético": 2,
+          "Sello de Unión": 1,
+          "Pulso Regulador": 1
+        }
+      },
+      "classHint": "Gametos, fecundación y reproducción humana",
+      "missionBrief": "Dos núcleos anómalos orbitan entre sí, buscando una unión estable.",
+      "objective": "Explicar qué son los gametos y cómo participan en la fecundación.",
+      "evidence": [
+        "Los gametos llevan información genética.",
+        "La fecundación implica unión de gametos.",
+        "El proceso inicia el desarrollo de un nuevo organismo.",
+        "La reproducción sexual combina información de ambos gametos."
+      ],
+      "parts": [
+        {
+          "name": "Núcleo masculino",
+          "task": "Identificar características generales de un gameto."
+        },
+        {
+          "name": "Núcleo femenino",
+          "task": "Relacionar gametos con información genética."
+        },
+        {
+          "name": "Órbita de unión",
+          "task": "Explicar fecundación como unión de gametos."
+        }
+      ],
+      "visualArchetype": "amorfo",
+      "palette": "gamete_dual",
+      "animationStyle": "orbital_merge",
+      "zoneId": "ruinas",
+      "art": "body"
+    },
+    {
+      "id": "embryonox",
+      "name": "Embryonox",
+      "icon": "🫀",
+      "type": "Anomalía del Desarrollo",
+      "typeKey": "body",
+      "zone": "Ruinas del Cuerpo Humano",
+      "threat": 4,
+      "habitat": "Etapas tempranas del desarrollo, capas protectoras y procesos de diferenciación.",
+      "weakness": "Comprender etapas generales del desarrollo embrionario y cambios progresivos.",
+      "lore": "Embryonox duerme dentro de capas antiguas. Cada latido abre una etapa; cada etapa revela una forma nueva.",
+      "sessionCode": "GREMIO-CUERPO",
+      "captureCode": "ETAPA-9",
+      "locked": true,
+      "reward": {
+        "xp": 90,
+        "mats": {
+          "Capa Embrionaria": 2,
+          "Latido Inicial": 1,
+          "Núcleo Gamético": 1
+        }
+      },
+      "classHint": "Desarrollo embrionario, etapas del desarrollo y diferenciación",
+      "missionBrief": "Una entidad protegida por capas muestra cambios progresivos en su forma interna.",
+      "objective": "Ordenar y explicar etapas generales del desarrollo humano temprano.",
+      "evidence": [
+        "El desarrollo ocurre por etapas.",
+        "Las células comienzan a diferenciarse.",
+        "Las estructuras se forman progresivamente.",
+        "El proceso depende de divisiones y organización celular."
+      ],
+      "parts": [
+        {
+          "name": "Capa protectora",
+          "task": "Reconocer que el desarrollo ocurre por etapas."
+        },
+        {
+          "name": "Latido inicial",
+          "task": "Relacionar división celular y desarrollo."
+        },
+        {
+          "name": "Forma emergente",
+          "task": "Explicar diferenciación progresiva."
+        }
+      ],
+      "visualArchetype": "humanoide",
+      "palette": "embryo_amber",
+      "animationStyle": "layer_open",
+      "zoneId": "ruinas",
+      "art": "body"
+    },
+    {
+      "id": "puberox",
+      "name": "Puberox",
+      "icon": "🌙",
+      "type": "Anomalía del Cambio Corporal",
+      "typeKey": "body",
+      "zone": "Ruinas del Cuerpo Humano",
+      "threat": 3,
+      "habitat": "Etapas de crecimiento, pubertad, cambios físicos y regulación hormonal.",
+      "weakness": "Comprender la pubertad como etapa de cambios corporales regulados por hormonas.",
+      "lore": "Puberox cambia sin pedir permiso. Su cuerpo nunca permanece igual: cada ciclo deja una marca, una señal, una nueva forma.",
+      "sessionCode": "GREMIO-CUERPO",
+      "captureCode": "CAMBIO-13",
+      "locked": true,
+      "reward": {
+        "xp": 75,
+        "mats": {
+          "Marca de Cambio": 2,
+          "Sello Hormonal": 1,
+          "Pulso Regulador": 1
+        }
+      },
+      "classHint": "Pubertad, cambios físicos, desarrollo y hormonas",
+      "missionBrief": "Una bestia cambiante altera su forma siguiendo señales internas de crecimiento.",
+      "objective": "Explicar cambios de la pubertad de forma respetuosa, científica y clara.",
+      "evidence": [
+        "La pubertad implica cambios físicos y emocionales.",
+        "Las hormonas participan en estos cambios.",
+        "No todas las personas cambian al mismo ritmo.",
+        "Es una etapa normal del desarrollo humano."
+      ],
+      "parts": [
+        {
+          "name": "Piel mudable",
+          "task": "Reconocer cambios corporales propios de la pubertad."
+        },
+        {
+          "name": "Pulso hormonal",
+          "task": "Relacionar hormonas y cambios físicos."
+        },
+        {
+          "name": "Ritmo individual",
+          "task": "Explicar que el desarrollo no ocurre igual en todos."
+        }
+      ],
+      "visualArchetype": "bruto",
+      "palette": "puberty_shadow",
+      "animationStyle": "shape_shift",
+      "zoneId": "ruinas",
+      "art": "body"
+    },
+    {
+      "id": "quimerax",
+      "name": "Quimerax",
+      "icon": "🐉",
+      "type": "Anomalía Mayor",
+      "typeKey": "boss",
+      "zone": "Dominio de Quimerax",
+      "threat": 5,
+      "habitat": "Cruza todas las zonas. Sin hábitat fijo. Reacciona a toda anomalía previamente contenida.",
+      "weakness": "Integrar conocimientos infecciosos, celulares, genéticos, energéticos y del cuerpo humano.",
+      "lore": "El Gremio creía que Quimerax era una leyenda. Combina señales de todas las anomalías conocidas y solo puede ser contenida por quienes hayan completado el registro mayor.",
+      "sessionCode": "GREMIO-BOSS",
+      "captureCode": "QUIMERAX-FINAL",
+      "locked": true,
+      "requires": [
+        "virulox",
+        "bacillus",
+        "osmogarra",
+        "cromavorax",
+        "mitocrix",
+        "hormonarca"
+      ],
+      "reward": {
+        "xp": 180,
+        "mats": {
+          "Escama de Quimerax": 1,
+          "Esencia Combinada": 2,
+          "Insignia Legendaria": 1
+        }
+      },
+      "classHint": "Evaluación integradora final",
+      "missionBrief": "La anomalía mayor despierta cuando los sellos de las zonas comienzan a reaccionar entre sí.",
+      "objective": "Elaborar una síntesis integradora usando evidencias de distintas unidades científicas.",
+      "evidence": [
+        "Presenta señales virales, celulares, genéticas y energéticas.",
+        "Su patrón no pertenece a una sola zona.",
+        "Requiere comparar evidencias de varias anomalías.",
+        "Solo se contiene con una explicación integradora."
+      ],
+      "parts": [
+        {
+          "name": "Núcleo viral",
+          "task": "Comparar virus y bacterias usando evidencias."
+        },
+        {
+          "name": "Coraza celular",
+          "task": "Explicar membrana, organelos o estructura celular."
+        },
+        {
+          "name": "Hélice mutante",
+          "task": "Integrar ADN, ARN, mutaciones o información genética."
+        },
+        {
+          "name": "Pecho energético",
+          "task": "Relacionar energía, ATP, fotosíntesis o metabolismo."
+        },
+        {
+          "name": "Corona final",
+          "task": "Construir una conclusión científica integradora."
+        }
+      ],
+      "visualArchetype": "boss",
+      "palette": "quimerax_dark",
+      "animationStyle": "multi_core_boss",
+      "zoneId": "dominio",
+      "art": "boss"
+    }
+  ]
+}

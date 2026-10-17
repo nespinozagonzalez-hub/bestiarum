@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <base href="../">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#131411">
+  <meta name="description" content="Cruza el Velo. Recorre seis territorios, sigue los rastros de 22 bestias y escribe tu leyenda en las crónicas del Gremio.">
+  <title>Bestiarium · Crónicas del Gremio</title>
+  <link rel="icon" href="assets/crest.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/art/guild-refuge.webp" as="image">
+  <link rel="stylesheet" href="assets/css/grimoire.css?v=3.0.0">
+  <script src="assets/js/catalog.js?v=3.0.0" defer></script>
+  <script src="assets/js/storage.js?v=3.0.0" defer></script>
+  <script src="assets/js/app.js?v=3.0.0" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div id="intro" class="intro screen" hidden>
+  <header class="intro-nav"><a class="wordmark" href="./"><img src="assets/crest.svg" alt="" width="38" height="48"><span>BESTIARIUM<small>CRÓNICAS DEL GREMIO</small></span></a><span class="edition">EL VELO SE HA ABIERTO</span></header>
+  <main class="intro-content"><p class="eyebrow">UN JURAMENTO. SEIS TERRITORIOS. TU LEYENDA.</p><h1>Hay cosas que<br>es mejor <em>no despertar.</em></h1><div class="ornament"><span></span>✦<span></span></div><p>La niebla ha regresado. Los viejos sellos se debilitan.<br>Y algo, al otro lado del Velo, recuerda tu nombre.</p><p class="intro-invite">Entra al Gremio. Sigue los rastros. Escribe tu crónica.</p><div class="button-row"><button class="btn primary" data-action="register">Prestar el juramento <span>→</span></button><button class="btn quiet" id="continueIntro" data-action="continue" hidden>Retomar mi crónica</button></div></main>
+  <footer class="intro-footer"><span>XXII BESTIAS · VI TERRITORIOS · UN SOLO GREMIO</span><span>FANTASÍA OSCURA · AVENTURA Y COLECCIÓN</span></footer>
+</div>
+<div id="registration" class="screen registration" hidden>
+  <header class="reg-header"><button class="text-link" data-action="intro">← Volver al umbral</button><span class="eyebrow">EL GREMIO TE DA LA BIENVENIDA</span></header>
+  <main class="reg-shell"><div class="reg-art"><img id="regPortrait" src="assets/art/hunter-1.webp" alt="Retrato de tu cazador"><div><span class="eyebrow">CADA LEYENDA EMPIEZA CON UN NOMBRE</span><h1>Tu lugar<br>en la crónica.</h1><p>Una persona o un equipo.<br>El mismo juramento ante el Velo.</p></div></div>
+  <form id="registrationForm" class="reg-form"><p class="eyebrow">01 / IDENTIDAD DEL CAZADOR</p><h2>Presta el juramento</h2><label for="playerName">Nombre del cazador o del equipo</label><input id="playerName" name="player" placeholder="¿Cómo te recordará el Gremio?" maxlength="32" required autocomplete="nickname"><fieldset><legend>Elige tu apariencia</legend><div id="avatarPicker" class="avatar-picker"></div></fieldset><label for="classSelect">Tu senda</label><select id="classSelect" name="specialty"></select><p id="classDescription" class="form-note"></p><label for="originSelect">Tu refugio de origen</label><select id="originSelect" name="origin"></select><p class="form-note">Tu senda y tu origen forman parte de tu historia. Todas las sendas reciben las mismas recompensas.</p><button class="btn primary full" type="submit">Inscribir mi nombre <span>→</span></button><p class="local-note">Tu crónica se guarda en este navegador.</p></form></main>
+</div>
+<div id="app" class="screen app-shell" hidden>
+  <aside class="sidebar"><a href="#refugio" class="wordmark" data-view="refugio"><img src="assets/crest.svg" alt="" width="36" height="44"><span>BESTIARIUM<small>CRÓNICAS DEL GREMIO</small></span></a><div class="sidebar-rule"></div><p class="nav-label">EL GREMIO</p><nav aria-label="Navegación del Gremio" id="navigation"></nav><div class="sidebar-bottom"><div class="side-quote">«Lo que acecha en la niebla<br>también teme a algo.»<span>DEL PRIMER GRIMORIO</span></div><button class="side-control" data-action="settings"><span data-icon="settings"></span>Ajustes y guía</button><div class="save-status" id="saveStatus" role="status"></div><span class="build">BESTIARIUM · VOL. III</span></div></aside>
+  <div class="app-body"><header class="topbar"><div class="breadcrumb"><span class="small-crest" data-icon="sigil"></span><span>EL GREMIO</span><span class="crumb-sep">/</span><strong id="currentView">Refugio</strong></div><div class="hud"><span class="hud-xp"><span data-icon="spark"></span><b id="hudXP">0</b> XP</span><button class="sound-button" id="soundButton" data-action="sound" aria-label="Activar sonido" aria-pressed="false"></button><button class="hud-profile" data-view="perfil"><img id="hudAvatar" src="assets/art/hunter-1.webp" alt=""><span><b id="hudName"></b><small id="hudRank"></small></span></button></div></header>
+  <main id="main" tabindex="-1"><section id="view-refugio" class="view"></section><section id="view-atlas" class="view" hidden></section><section id="view-bestiario" class="view" hidden></section><section id="view-contratos" class="view" hidden></section><section id="view-inventario" class="view" hidden></section><section id="view-perfil" class="view" hidden></section><section id="view-cronica" class="view" hidden></section></main>
+  <footer class="app-footer"><span>QUE EL FUEGO DEL REFUGIO NUNCA SE APAGUE.</span><span id="footerProgress">0 DE 22 BESTIAS SELLADAS</span></footer></div>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Navegación rápida"></nav>
+</div>
+<dialog id="detailDialog" class="detail-dialog" aria-labelledby="detailTitle"><div id="detailContent"></div></dialog>
+<dialog id="settingsDialog" class="settings-dialog" aria-labelledby="settingsTitle"><button class="dialog-close" data-close="settingsDialog" aria-label="Cerrar ajustes">×</button><p class="eyebrow">LOS ARCHIVOS DEL GREMIO</p><h2 id="settingsTitle">Ajustes y guía</h2><div class="setting"><div><strong>Sonido del Gremio</strong><p>Campanas y sellos durante las cacerías.</p></div><input type="checkbox" id="soundSetting" aria-label="Activar sonido"></div><div class="setting"><div><strong>Movimiento reducido</strong><p>Revelaciones sin destellos ni movimientos.</p></div><input type="checkbox" id="motionSetting" aria-label="Reducir movimiento"></div><div class="help-block"><h3>El ciclo de la cacería</h3><ol><li><strong>Abre un contrato.</strong> Ingresa el código inicial en el Tablón.</li><li><strong>Sigue el rastro.</strong> Completa el desafío de tu expedición.</li><li><strong>Sella la bestia.</strong> Ingresa el código final y recibe el botín.</li></ol><p>Las bestias mantienen su identidad velada hasta la captura. Quimerax exige seis sellos clave de otros territorios.</p></div><div class="help-block"><h3>Tu crónica</h3><p>El progreso se guarda en este navegador. Puedes descargar un respaldo para conservarlo. Las cuentas y la sincronización entre dispositivos se incorporarán en una siguiente etapa.</p><button class="btn secondary" data-action="export"><span data-icon="download"></span>Descargar respaldo</button></div><div class="help-block"><button class="text-link" data-action="intro">Volver al umbral</button><p>Tu progreso permanece guardado.</p></div></dialog>
+<dialog id="ceremony" class="ceremony" aria-labelledby="ceremonyTitle"><div class="cer-embers" aria-hidden="true"></div><p class="eyebrow" id="ceremonyStep">EL SELLO RESPONDE</p><div id="ceremonyBody"></div><button id="ceremonyNext" class="btn primary" data-action="ceremonyNext">Revelar la bestia <span>→</span></button></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><p class="noscript">Activa JavaScript para abrir las crónicas de Bestiarium.</p></noscript>
+</body>
+</html>

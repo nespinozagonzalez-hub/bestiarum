@@ -1,0 +1,205 @@
+{
+  "transparentPng": [
+    {
+      "file": "beast-bacillus.png",
+      "width": 1100,
+      "height": 733,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-clorofang.png",
+      "width": 1044,
+      "height": 1100,
+      "alpha": [
+        0,
+        252
+      ]
+    },
+    {
+      "file": "beast-cromavorax.png",
+      "width": 1100,
+      "height": 1031,
+      "alpha": [
+        0,
+        252
+      ]
+    },
+    {
+      "file": "beast-embryonox.png",
+      "width": 733,
+      "height": 1100,
+      "alpha": [
+        0,
+        252
+      ]
+    },
+    {
+      "file": "beast-gametrix.png",
+      "width": 1100,
+      "height": 917,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-glucolixrex.png",
+      "width": 1053,
+      "height": 1100,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-helicassa.png",
+      "width": 1100,
+      "height": 1005,
+      "alpha": [
+        0,
+        252
+      ]
+    },
+    {
+      "file": "beast-hormonarca.png",
+      "width": 733,
+      "height": 1100,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-lisombra.png",
+      "width": 1100,
+      "height": 733,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-micelombra.png",
+      "width": 733,
+      "height": 1100,
+      "alpha": [
+        0,
+        252
+      ]
+    },
+    {
+      "file": "beast-mitocrix.png",
+      "width": 1005,
+      "height": 1100,
+      "alpha": [
+        0,
+        252
+      ]
+    },
+    {
+      "file": "beast-mutagenoalfa.png",
+      "width": 1005,
+      "height": 1100,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-nucleara.png",
+      "width": 733,
+      "height": 1100,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-osmogarra.png",
+      "width": 1100,
+      "height": 733,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-parasitrox.png",
+      "width": 917,
+      "height": 1100,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-puberox.png",
+      "width": 733,
+      "height": 1100,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-quimerax.png",
+      "width": 1100,
+      "height": 1005,
+      "alpha": [
+        0,
+        252
+      ]
+    },
+    {
+      "file": "beast-ribosomor.png",
+      "width": 1100,
+      "height": 733,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-termovolt.png",
+      "width": 1100,
+      "height": 1005,
+      "alpha": [
+        0,
+        252
+      ]
+    },
+    {
+      "file": "beast-transcriptor.png",
+      "width": 733,
+      "height": 1100,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-vacunara.png",
+      "width": 917,
+      "height": 1100,
+      "alpha": [
+        0,
+        253
+      ]
+    },
+    {
+      "file": "beast-virulox.png",
+      "width": 1005,
+      "height": 1100,
+      "alpha": [
+        0,
+        253
+      ]
+    }
+  ],
+  "webpCount": 33,
+  "pngCount": 22,
+  "artBytes": 17405701
+}

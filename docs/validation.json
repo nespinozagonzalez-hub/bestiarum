@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-16T18:59:07.639Z",
+  "method": "DOM simulado con eventos reales del controlador; revisión visual separada",
+  "checks": [
+    "Registro, apariencia, senda y origen",
+    "Códigos iniciales incorrectos y captura cerrada",
+    "Apertura sin revelar nombres y sin duplicar eventos",
+    "Código final incorrecto o de una cacería cerrada rechazado",
+    "Captura única: ceremonia, recompensa exacta y doble envío bloqueado",
+    "Progreso recuperable al recargar",
+    "Filtros y búsqueda de registros revelados",
+    "Quimerax bloqueado por los seis requisitos, sin revelar nombres pendientes",
+    "Quimerax se sella al reunir sus seis capturas originales",
+    "Colección completa: 22 capturas, XP e inventario exactos, ocho trofeos, 44 eventos",
+    "Migración V2.5: conserva XP, inventario, capturas, fechas y copia original",
+    "Fallo de guardado revierte la captura, avisa y no entrega botín",
+    "El fallo al crear el respaldo no impide recuperar una partida legible",
+    "El dato corrupto se conserva y no se sobrescribe durante la lectura",
+    "Nombres escapados contra interpretación de HTML",
+    "Cambiar apariencia conserva toda la colección",
+    "Preferencia de movimiento reducido",
+    "La vista de revisión conserva su URL al navegar"
+  ]
+}
