@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const {JSDOM}=require(process.env.BESTIARIUM_JSDOM||'jsdom');
 const html=fs.readFileSync('index.html','utf8');
-const scripts=['catalog','storage','app'].map(n=>fs.readFileSync('assets/js/'+n+'.js','utf8'));
+const scripts=['config','catalog','storage','accounts','app'].map(n=>fs.readFileSync('assets/js/'+n+'.js','utf8'));
 const results=[];
 function ok(label){results.push(label);console.log('PASS',label);}
 function make(old,quotaBackup=false,preview=false){

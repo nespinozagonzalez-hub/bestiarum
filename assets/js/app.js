@@ -5,7 +5,7 @@
  const paths={
  refuge:'M3 10 12 3l9 7v11h-7v-7h-4v7H3Z',map:'m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2V5Zm6-2v16m6-14v16',book:'M3 4h6a4 4 0 0 1 3 2 4 4 0 0 1 3-2h6v16h-6a4 4 0 0 0-3 1 4 4 0 0 0-3-1H3V4Zm9 2v15',scroll:'M6 3h13v14a4 4 0 0 1-4 4H5a3 3 0 0 1-3-3v-1h13v1a3 3 0 0 0 3 3M6 3v14M6 3a3 3 0 0 0-3 3v2h3m3 0h7m-7 4h5',bag:'M5 8h14l2 13H3L5 8Zm3 0V6a4 4 0 0 1 8 0v2M8 12v3m8-3v3',shield:'M4 4 12 1l8 3v9c0 5-8 9-8 9s-8-4-8-9V4Zm4 7 3 3 5-6',user:'M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z',history:'M3 4v6h6M3 10a9 9 0 1 1 .8 7M12 6v6l4 2',settings:'m9 3 1-2h4l1 2 3 2 2 1v4l-2 1-1 3-1 2h-4l-1-2-3-1-2-1V8l2-1 1-4Zm3 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8',spark:'m12 2 2 7 7 3-7 2-2 8-2-8-7-2 7-3 2-7Z',sigil:'m12 2 8 5v10l-8 5-8-5V7l8-5Zm0 4v12M7 9l5 7 5-7',compass:'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM15 8l-2 6-5 2 2-6 5-2Z',flask:'M9 2h6m-5 0v7L4 19a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3L14 9V2M7 15h10',lock:'M5 10h14v11H5V10Zm3 0V6a4 4 0 0 1 8 0v4m-4 4v3',search:'m16 16 5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z',download:'M12 2v13m-5-5 5 5 5-5M3 16v5h18v-5',sound:'m11 3-6 5H2v8h3l6 5V3Zm4 4a7 7 0 0 1 0 10m3-13a11 11 0 0 1 0 16',mute:'m11 3-6 5H2v8h3l6 5V3Zm4 6 6 6m0-6-6 6',trophy:'M7 3h10v7a5 5 0 0 1-10 0V3Zm0 2H3v4a4 4 0 0 0 4 4m10-8h4v4a4 4 0 0 1-4 4m-5 2v5m-4 2h8',gem:'m6 3 12 0 4 6-10 13L2 9l4-6Zm-4 6h20M6 3l3 6 3 13 3-13 3-6',flame:'M14 2c1 6-4 7-2 12-3-1-3-4-3-4S4 13 5 17a7 7 0 0 0 14 0c1-5-3-10-5-15Z',moon:'M20 16A9 9 0 0 1 8 4a9 9 0 1 0 12 12Z',feather:'M20 3C10-1 2 8 7 17c9 5 18-4 13-14ZM3 22 17 7M7 17h7m-3-4h7',crown:'m3 6 4 4 5-7 5 7 4-4-2 12H5L3 6Zm2 15h14',check:'m4 12 5 5L21 5',arrow:'M3 12h18m-7-7 7 7-7 7',sword:'m14 3 7-1-1 7-11 11-6-6L14 3ZM3 21l4-4M3 12l9 9',coin:'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-5v10m3-8h-4a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4H9'};
  function icon(name){return `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${paths[name]||paths.gem}" stroke-linecap="round" stroke-linejoin="round"/></svg>`;}
- let S=GuildStorage.load(),P=GuildStorage.prefs(),current='refugio',chosenAvatar=S.avatar,editing=false,cer=null;
+ let S=GuildStorage.normalize(window.GuildAccount?.cached()||GuildStorage.load()),P=GuildStorage.prefs(),current='refugio',chosenAvatar=S.avatar,editing=false,cer=null;
  let filters={zone:'all',status:'all',search:''};
  const NAV=[['refugio','Refugio','refuge'],['atlas','Atlas del Velo','map'],['bestiario','Bestiario','book'],['contratos','Tablón de contratos','scroll'],['inventario','Inventario','bag'],['perfil','Credencial y trofeos','shield'],['cronica','Crónica','history']];
  const getZone=id=>D.zones.find(z=>z.id===id)||D.zones[0];
@@ -23,7 +23,7 @@
  const fmtDate=t=>new Date(t).toLocaleDateString('es-CL',{day:'2-digit',month:'short',year:'numeric'});
  function fillIcons(root=document){root.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=icon(el.dataset.icon));}
  function toast(text){$('#toast').textContent=text;$('#toast').classList.add('visible');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').classList.remove('visible'),4600);}
- function saveStatus(){const el=$('#saveStatus'),error=GuildStorage.getStatus()==='error';el.textContent=error?'No se pudo guardar. Revisa el almacenamiento del navegador.':S.introSeen?'✓ Crónica guardada en este navegador':'Tu crónica comienza aquí.';el.classList.toggle('error',error);}
+ function saveStatus(){const el=$('#saveStatus');if(window.GuildAccount?.isActive()){const st=GuildAccount.getStatus();el.textContent=['saving','loading'].includes(st)?'Consultando los archivos del Gremio…':st==='error'?'Sin confirmar conexión. Tu última crónica sigue disponible.':'✓ Crónica recuperada del Gremio';el.classList.toggle('error',st==='error');return;}const error=GuildStorage.getStatus()==='error';el.textContent=error?'No se pudo guardar. Revisa el almacenamiento del navegador.':S.introSeen?'✓ Crónica guardada en este navegador':'Tu crónica comienza aquí.';el.classList.toggle('error',error);}
  function mutate(fn){const previous=JSON.stringify(S);fn();if(!GuildStorage.save(S)){S=JSON.parse(previous);toast('No se pudo guardar el cambio. Libera espacio en el navegador y vuelve a intentarlo.');return false;}return true;}
  function screen(id){['intro','registration','app'].forEach(s=>$('#'+s).hidden=s!==id);window.scrollTo(0,0);}
  function heading(kicker,title,subtitle,action=''){return `<header class="page-heading"><div><p class="eyebrow">${kicker}</p><h1>${title}</h1><p class="subtitle">${subtitle}</p></div>${action}</header>`;}
@@ -86,8 +86,14 @@
  document.addEventListener('input',e=>{if(e.target.id==='beastSearch'){filters.search=e.target.value;renderBeastResults();}if(e.target.id==='playerName')e.target.setCustomValidity('');});
  $$('#detailDialog,#settingsDialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
  $('#ceremony').addEventListener('cancel',e=>{e.preventDefault();closeCeremony();});
+ window.addEventListener('guild:account-status',saveStatus);
+ window.addEventListener('guild:account-message',e=>toast(e.detail));
+ window.addEventListener('guild:remote-state',e=>{S=GuildStorage.normalize(e.detail.state);if($('#settingsDialog').open)$('#settingsDialog').close();navigate(e.detail.view||current);const meta=e.detail.meta;if(meta?.monsterId&&!meta.alreadyCaptured){cer={monster:beast(meta.monsterId),oldRank:meta.oldRank,newRank:meta.newRank,phase:0};showCeremony();}});
+ window.addEventListener('guild:remote-logout',()=>{S=GuildStorage.load();if(S.introSeen&&S.player)navigate('refugio');else screen('intro');saveStatus();});
  window.addEventListener('guild:storage',saveStatus);
- window.addEventListener('storage',e=>{if(e.key===GuildStorage.key&&e.newValue){S=GuildStorage.load();if(!$('#app').hidden){renders[current]();hud();toast('La crónica se actualizó desde otra pestaña.');}}});
+ window.addEventListener('storage',e=>{if(window.GuildAccount?.isActive())return;if(e.key===GuildStorage.key&&e.newValue){S=GuildStorage.load();if(!$('#app').hidden){renders[current]();hud();toast('La crónica se actualizó desde otra pestaña.');}}});
  window.addEventListener('hashchange',()=>{if(S.introSeen&&$('#registration').hidden)navigate(location.hash.slice(1)||'refugio');});
+ window.GuildAccount?.install();
  fillIcons();applyPrefs();saveStatus();$('#continueIntro').hidden=!S.introSeen;if(S.introSeen&&S.player)navigate(location.hash.slice(1)||'refugio');else screen('intro');
+ window.GuildAccount?.restore();
 })();

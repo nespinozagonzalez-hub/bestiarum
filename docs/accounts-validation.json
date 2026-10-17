@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-17T11:21:21.385Z",
+  "method": "Interfaz y controlador conectados al servidor Apps Script simulado, sin tráfico a Google",
+  "checks": [
+    "Crear cuenta desde la interfaz recupera estado remoto y limpia la clave",
+    "Cacería y captura usan el servidor; no sobrescriben la crónica local",
+    "Salir recupera la crónica local sin mezclar usuarios",
+    "Volver a entrar recupera capturas y XP del servidor",
+    "Una sesión revocada no degrada a guardado local con progreso remoto"
+  ]
+}

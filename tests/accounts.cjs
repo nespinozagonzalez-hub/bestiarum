@@ -1,0 +1,18 @@
+const {call}=require('./backend.cjs');
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const {JSDOM}=require(process.env.BESTIARIUM_JSDOM||'jsdom');
+const checks=[];function ok(x){checks.push(x);console.log('PASS',x);}
+(async()=>{
+ const dom=new JSDOM(fs.readFileSync('index.html','utf8'),{url:'https://example.test/bestiarum/',runScripts:'outside-only',pretendToBeVisual:true}),w=dom.window,$=s=>w.document.querySelector(s);
+ w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;};
+ w.fetch=async(url,opts)=>({ok:true,json:async()=>call(JSON.parse(opts.body))});
+ for(const n of ['config','catalog','storage','accounts','app']){if(n==='accounts')w.BESTIARIUM_REMOTE.url='https://script.google.com/macros/s/test/exec';w.eval(fs.readFileSync('assets/js/'+n+'.js','utf8'));}
+ const click=s=>$(s).click();const submit=(s,button)=>$(s).dispatchEvent(new w.SubmitEvent('submit',{bubbles:true,cancelable:true,submitter:button?$(button):undefined}));const tick=()=>new Promise(r=>setTimeout(r,15));
+ click('[data-action="register"]');$('#playerName').value='Prueba conectada';submit('#registrationForm');const localBefore=w.localStorage.getItem('bestiariumV25');
+ click('[data-action="settings"]');click('#accountButton');$('#accountUsername').value='ui_hunter';$('#accountPin').value='123456';submit('#accountForm','#accountForm [value="register"]');await tick();assert(w.GuildAccount.isActive());assert.equal($('#hudXP').textContent,'0');assert.equal($('#accountPin').value,'');ok('Crear cuenta desde la interfaz recupera estado remoto y limpia la clave');
+ click('#navigation [data-view="contratos"]');$('#huntCode').value='GREMIO-PANTANO';submit('#huntForm');await tick();assert(!$('#captureCode').disabled);$('#captureCode').value='NUCLEO-7';submit('#captureForm');await tick();assert.equal($('#hudXP').textContent,'50');assert($('#ceremony').open);assert.equal(w.localStorage.getItem('bestiariumV25'),localBefore);ok('Cacería y captura usan el servidor; no sobrescriben la crónica local');
+ for(let i=0;i<3;i++)click('#ceremonyNext');click('#detailDialog .dialog-close');click('[data-action="settings"]');click('#accountButton');click('[data-account="logout"]');await tick();assert(!w.GuildAccount.isActive());assert.equal($('#hudXP').textContent,'0');ok('Salir recupera la crónica local sin mezclar usuarios');
+ if($('#settingsDialog').open)$('#settingsDialog').close();click('[data-action="settings"]');click('#accountButton');$('#accountUsername').value='ui_hunter';$('#accountPin').value='123456';submit('#accountForm','#accountForm [value="login"]');await tick();assert.equal($('#hudXP').textContent,'50');ok('Volver a entrar recupera capturas y XP del servidor');
+ const session=JSON.parse(w.sessionStorage.getItem('bestiarium.account.v31'));call({action:'logout',token:session.token});click('#navigation [data-view="contratos"]');$('#huntCode').value='GREMIO-BOSQUE';submit('#huntForm');await tick();assert(!w.GuildAccount.isActive());assert.equal($('#hudXP').textContent,'0');assert.equal(w.localStorage.getItem('bestiariumV25'),localBefore);ok('Una sesión revocada no degrada a guardado local con progreso remoto');
+ dom.window.close();fs.writeFileSync('docs/accounts-validation.json',JSON.stringify({date:new Date().toISOString(),method:'Interfaz y controlador conectados al servidor Apps Script simulado, sin tráfico a Google',checks},null,2));console.log('COMPLETE',checks.length,'integration checks');
+})().catch(e=>{console.error(e);process.exit(1);});

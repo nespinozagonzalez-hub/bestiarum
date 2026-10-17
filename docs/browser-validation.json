@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-17T11:21:20.593975+00:00",
+  "method": "Navegador Chrome remoto; interfaz publicada y marcos de revisión adaptables",
+  "previewUrl": "https://nespinozagonzalez-hub.github.io/bestiarum/preview/",
+  "verifiedViews": [
+    "refugio",
+    "atlas",
+    "bestiario",
+    "contratos",
+    "inventario",
+    "perfil",
+    "cronica"
+  ],
+  "capture": {
+    "initial": "GREMIO-PANTANO",
+    "final": "NUCLEO-7",
+    "result": "Virulox revelada; +50 XP; ficha e inventario accesibles"
+  },
+  "responsiveWidths": [
+    {
+      "iframe": 320,
+      "client": 305,
+      "scroll": 305
+    },
+    {
+      "iframe": 390,
+      "client": 375,
+      "scroll": 375
+    },
+    {
+      "iframe": 768,
+      "client": 753,
+      "scroll": 753
+    }
+  ],
+  "limits": [
+    "No sustituye pruebas físicas en todos los teléfonos.",
+    "El viaje real a Google Sheets requiere publicar la aplicación web y configurar su URL."
+  ]
+}

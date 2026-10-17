@@ -1,6 +1,6 @@
 # Bestiarium · Crónicas del Gremio
 
-Remasterización 3.0 de la experiencia de cacería y colección. Fantasía oscura original, 22 bestias, seis territorios y seis rangos de cazador. Publicación estática, sin compilación ni dependencias de producción.
+Remasterización 3.1 de la experiencia de cacería y colección. Fantasía oscura original, 22 bestias, seis territorios y seis rangos de cazador. Publicación estática, sin compilación ni dependencias de producción.
 
 ## Abrir
 
@@ -15,7 +15,7 @@ Remasterización 3.0 de la experiencia de cacería y colección. Fantasía oscur
 - `assets/js/catalog.js`: catálogo narrativo, recompensas originales, regiones y sendas.
 - `assets/js/storage.js`: adaptador local, normalización y copia previa a la migración.
 - `assets/js/app.js`: navegación, contratos, capturas, ceremonia, colección y crónica.
-- `assets/art/`: ilustraciones originales; WebP para la interfaz y PNG con transparencia para las bestias.
+- `assets/art/`: ilustraciones originales; WebP para la interfaz con transparencia para las bestias.
 - `docs/catalogo-docente.json`: catálogo previo, códigos y asociaciones pedagógicas originales, fuera de la aventura.
 - `docs/GUIA_DOCENTE.md`: uso y continuación del proyecto.
 - `docs/art-prompts.json`: especificaciones de las imágenes generadas con ImageGen.
@@ -31,10 +31,13 @@ Las cuatro sendas definen identidad narrativa. No anuncian ni conceden bonificac
 
 La clave continúa siendo `bestiariumV25`. Antes de leer una partida anterior se conserva una copia en `bestiariumV25.pre-remaster`. No se recalculan XP ni inventario. El respaldo descargable es un archivo de conservación; no se habilita su importación automática. El sistema no borra partidas para cambiar la apariencia.
 
-## Etapa pendiente: cuentas
+## Cuentas y Sheets: listo para instalar
 
-Esta entrega guarda localmente. No crea usuarios con contraseña, no autentica ni sincroniza entre dispositivos. La siguiente fase requiere una hoja propia y un servicio de validación: véase `docs/CUENTAS_PENDIENTES.md`.
+El backend y la interfaz de usuarios están implementados y comprobados en simulación. `backend/Code.gs` crea las cinco pestañas y valida sesiones, capturas y recompensas. La guía es `backend/INSTALACION.md`. La URL de despliegue está vacía en `assets/js/config.js`: hasta publicar Apps Script en la cuenta de Google, el juego conserva el guardado local.
 
 ## Comprobación
 
 Las 18 comprobaciones funcionales ejecutadas con un DOM simulado están registradas en `docs/validation.json`. Se reproducen con Node y jsdom mediante `node tests/state.cjs` (o la variable `BESTIARIUM_JSDOM` apuntando al módulo). Cubren captura, duplicaciones, jefe final, colección completa, persistencia y migración. La revisión visual del navegador se registra por separado en la checklist. `tests/regression.cjs` contiene una suite adicional de Playwright; no se presenta como ejecutada cuando no hay un navegador local disponible. No se ha probado físicamente cada modelo de teléfono.
+
+
+El backend añade 11 pruebas y su integración con la interfaz otras cinco: `node tests/backend.cjs` y `node tests/accounts.cjs` (con jsdom disponible). Los registros están en `docs/backend-validation.json`, `docs/accounts-validation.json` y `docs/browser-validation.json`.

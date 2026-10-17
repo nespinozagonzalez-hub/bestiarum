@@ -1,6 +1,6 @@
 /* Bestiarium 3.0. Identificadores, códigos y recompensas conservados de V2.5. */
 window.BESTIARIUM = {
-  "version": "3.0.0",
+  "version": "3.1.0",
   "ranks": [
     {
       "min": 0,

@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-17T11:21:20.673Z",
+  "method": "Apps Script ejecutado en VM con servicios Sheets simulados; falta despliegue real en Google",
+  "checks": [
+    "Instalación repetible: cinco pestañas y 22 bestias sin borrar datos",
+    "Registro con clave de seis dígitos, sin clave en claro ni progreso inventado",
+    "Login correcto; códigos erróneos y captura sin cacería rechazados",
+    "Idempotencia: mismo envío, nuevo envío y reutilización incorrecta del ID",
+    "Quimerax conserva y aplica sus seis requisitos en el servidor",
+    "22 capturas con suma exacta de recompensas en servidor",
+    "Los usuarios no comparten capturas ni inventario",
+    "Migración solicitada no acredita progreso automáticamente",
+    "Cerrar sesión revoca el token",
+    "Bloqueo tras cinco intentos incorrectos",
+    "Tokens y acciones desconocidos rechazados"
+  ]
+}

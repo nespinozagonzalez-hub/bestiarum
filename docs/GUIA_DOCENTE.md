@@ -32,7 +32,7 @@ El archivo descargado no se importa automáticamente: la migración futura a cue
 
 ## Arte
 
-Las ilustraciones se generaron individualmente mediante ImageGen. Las especificaciones se documentan en `art-prompts.json`. Las bestias se preparan con transparencia, las regiones con fondos panorámicos y los cazadores con retratos propios. La ficha compone cada bestia sobre su territorio; no necesita descargar otra ilustración completa redundante.
+Las ilustraciones se generaron individualmente mediante ImageGen. Las especificaciones se documentan en `art-prompts.json`. Las bestias se generan con transparencia y la web utiliza WebP optimizado para colección y ceremonia; las regiones tienen fondos panorámicos y los cazadores retratos propios. La ficha compone cada bestia sobre su territorio; no necesita descargar otra ilustración completa redundante.
 
 ## Reversión
 
