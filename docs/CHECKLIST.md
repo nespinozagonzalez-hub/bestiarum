@@ -1,4 +1,4 @@
-# Checklist de la remasterización · Bestiarium 3.1
+# Checklist de la remasterización · Bestiarium 3.2
 
 ## Implementación
 
@@ -63,3 +63,11 @@ Las pruebas registradas en `validation.json` se ejecutaron con eventos del contr
 - [ ] Probar la conexión real entre dispositivos con la hoja desplegada.
 
 Esta entrega conserva el ciclo original de cacería y captura. No incorpora cuestionarios internos ni cambia automáticamente a captura libre por código.
+
+## Campaña y progresión
+
+- [x] Crónicas del Velo: 15 capítulos con páginas guardadas y relectura.
+- [x] Forja, equipo, cuatro talentos y cinco investigaciones.
+- [x] Reliquias, refugio personalizable y territorio restaurado.
+- [x] Faro cooperativo preparado en servidor; requiere activar Google.
+- [x] Checklist detallada de campaña en [CAMPANA.md](CAMPANA.md).

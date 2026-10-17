@@ -63,5 +63,7 @@ window.GuildAccount=(()=>{
    }catch(err){message(err.message);}
   },true);
  }
- return {configured,isActive:()=>!!session,cached:()=>session?.state||null,getStatus:()=>status,install,restore};
+ async function campaign(operation){const data=await request('campaign',{operation,requestId:requestId()});emit(data);return data;}
+ async function community(){const data=await request('community');return data.community;}
+ return {campaign,community,configured,isActive:()=>!!session,cached:()=>session?.state||null,getStatus:()=>status,install,restore};
 })();

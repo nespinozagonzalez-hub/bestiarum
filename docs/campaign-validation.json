@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-17T12:22:58.117Z",
+  "method": "Reglas compartidas, servidor Apps Script simulado y eventos de interfaz en jsdom",
+  "checks": [
+    "15 capítulos: solo el prólogo está disponible al comenzar; bloqueos y páginas validados",
+    "Primer contrato abre entrada; completar región deriva capítulo, reliquia y puntos sin duplicar XP",
+    "Reanudar escenas y releer no duplica capítulos ni entrega premios repetidos",
+    "Talentos limitados, ahorro real, equipo poseído y forja única con descuento registrado",
+    "Investigación respeta región y Astucia; elección única, temas solo al restaurar",
+    "Colección completa abre los 15 capítulos y mantiene ocho puntos como máximo",
+    "Servidor valida campaña, ignora inventario cliente y conserva idempotencia por operación",
+    "Migración aprobada recompone recompensas y descuenta materiales ya gastados en la forja",
+    "Faro cooperativo deriva hitos agregados sin publicar identidades ni usuarios",
+    "Interfaz: prólogo antes del registro, bienvenida, capítulos bloqueados y lectura consultable",
+    "Interfaz: forjar equipa, el farol revela pista y una elección queda conservada",
+    "Guardado conserva lectura, forja y elección junto a las capturas originales"
+  ]
+}

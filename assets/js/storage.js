@@ -18,7 +18,7 @@ window.GuildStorage = (() => {
   out.registeredAt=Object.fromEntries(Object.entries(v.registeredAt||{}).filter(([id,t])=>ids.has(id)&&finite(t)));
   out.avatar=['hunter-1','hunter-2','hunter-3','hunter-4'].includes(v.avatar)?v.avatar:'hunter-1';
   out.origin=BESTIARIUM.zones.some(z=>z.id===v.origin)?v.origin:'bosque';
-  out.introSeen=!!v.introSeen;return out;
+  out.introSeen=!!v.introSeen;out.campaign=GuildCampaign.normalize(v.campaign);return out;
  }
  function load(){
   let raw;

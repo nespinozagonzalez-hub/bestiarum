@@ -35,3 +35,7 @@ Para cerrar nuevas inscripciones, cambia la propiedad del script `BG_REGISTRO_AB
 Las pruebas locales verifican el controlador y el servidor con servicios de Sheets simulados. La autorización de Google, el acceso público `/exec` y el viaje real navegador → Apps Script → Sheets requieren la implementación en tu cuenta. No se presentan como comprobados antes de tener esa URL.
 
 Referencias oficiales: [Aplicaciones web](https://developers.google.com/apps-script/guides/web) y [Content Service](https://developers.google.com/apps-script/guides/content).
+
+## Campaña 3.2
+
+El archivo completo incluye las reglas de narrativa, forja, equipo, talentos e investigaciones. No es necesario añadir pestañas: estos datos viven en `estado_json`. El faro cooperativo devuelve únicamente cifras agregadas del Gremio que comparte la hoja. Después de cambiar el script, publica una nueva versión del despliegue y conserva la URL `/exec` si actualizas el despliegue existente.

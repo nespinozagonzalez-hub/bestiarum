@@ -41,3 +41,9 @@ Las 18 comprobaciones funcionales ejecutadas con un DOM simulado están registra
 
 
 El backend añade 11 pruebas y su integración con la interfaz otras cinco: `node tests/backend.cjs` y `node tests/accounts.cjs` (con jsdom disponible). Los registros están en `docs/backend-validation.json`, `docs/accounts-validation.json` y `docs/browser-validation.json`.
+
+## Campaña 3.2: Las Crónicas del Velo
+
+Quince capítulos ilustrados, cinco investigaciones, ocho recetas, equipo, talentos, reliquias y refugio personalizable. Consulta la [checklist de campaña](docs/CAMPANA.md). La activación de Google sigue pendiente: las cuentas y el faro cooperativo necesitan una URL real de Apps Script.
+
+Tras editar las reglas o la interfaz de campaña ejecuta `python scripts/build-campaign.py`. Las pruebas de `tests/campaign.cjs` cubren desbloqueos, lectura, consumo de materiales, decisiones, migración y validación en servidor simulado.
