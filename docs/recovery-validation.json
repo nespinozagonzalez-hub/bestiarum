@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-17T12:55:26.297Z",
+  "method": "Eventos DOM y respuestas remotas demoradas o fallidas en jsdom",
+  "checks": [
+    "Otra pestaña actualiza capítulos, reliquias, territorio restaurado y avisos sin duplicarlos",
+    "Una lectura con guardado pendiente bloquea doble avance y permite cerrar",
+    "Una respuesta tardía no cambia la página de otro capítulo recién abierto",
+    "Un fallo de conexión conserva la escena y permite reintentar",
+    "El reintento guarda y avanza exactamente una página"
+  ]
+}

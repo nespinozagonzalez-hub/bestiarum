@@ -1,0 +1,41 @@
+{
+  "project": "Bestiarium · Crónicas del Gremio",
+  "version": "3.2.1",
+  "updatedAt": "2026-10-17T12:56:47.279917+00:00",
+  "repository": "nespinozagonzalez-hub/bestiarum",
+  "branch": "main",
+  "url": "https://nespinozagonzalez-hub.github.io/bestiarum/",
+  "implemented": [
+    "22 bestias y seis territorios con códigos y recompensas originales",
+    "15 capítulos ilustrados consultables, con lectura guardada",
+    "Entradas por contrato y capítulos/reliquias por territorios completos",
+    "Ocho recetas, tres ranuras de equipo y cuatro talentos de dos niveles",
+    "Cinco investigaciones con decisiones persistentes",
+    "Faro cooperativo preparado en el backend",
+    "Protección de lectura frente a doble avance, demoras y errores de conexión",
+    "Actualización completa de campaña entre pestañas"
+  ],
+  "validation": {
+    "automatedChecks": 52,
+    "suites": [
+      "tests/state.cjs",
+      "tests/backend.cjs",
+      "tests/accounts.cjs",
+      "tests/campaign.cjs",
+      "tests/recovery.cjs"
+    ],
+    "browser": [
+      "Prólogo antes del registro y reanudación tras registro",
+      "Captura original NUCLEO-7: +50 XP, ceremonia y ficha",
+      "Farol forjado revela pista; decisión persiste tras recargar",
+      "Crónicas, lector y taller sin desbordamiento horizontal en marcos de 320,390,768 px"
+    ]
+  },
+  "pending": [
+    "Ejecutar setupBestiarium y publicar Apps Script desde Google",
+    "Configurar URL /exec en assets/js/config.js",
+    "Prueba real de sincronización entre dispositivos",
+    "Revisión del usuario sobre ritmo, tono y equilibrio"
+  ],
+  "continuity": "Continuar desde este archivo y verificar main antes de editar. No reiniciar el remaster. No cambiar códigos ni reemplazar el repositorio."
+}

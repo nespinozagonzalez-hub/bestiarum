@@ -1,4 +1,4 @@
-# Checklist de la remasterización · Bestiarium 3.2
+# Checklist de la remasterización · Bestiarium 3.2.1
 
 ## Implementación
 
@@ -71,3 +71,14 @@ Esta entrega conserva el ciclo original de cacería y captura. No incorpora cues
 - [x] Reliquias, refugio personalizable y territorio restaurado.
 - [x] Faro cooperativo preparado en servidor; requiere activar Google.
 - [x] Checklist detallada de campaña en [CAMPANA.md](CAMPANA.md).
+
+## Recuperación y estabilidad 3.2.1
+
+- [x] Evitar doble avance durante un guardado remoto de lectura.
+- [x] Una respuesta tardía no mueve otro capítulo abierto después.
+- [x] Un error de conexión conserva la escena y permite reintentar.
+- [x] Cambios de otra pestaña refrescan capítulos, reliquias, ambientación y avisos.
+- [x] 52 comprobaciones automáticas aprobadas, sin contar ejecuciones repetidas del backend.
+- [x] Campaña revisada en navegador publicado: prólogo, captura, forja, pista y decisión recuperada tras recarga.
+- [x] Crónicas, lector y taller revisados a 320, 390 y 768 px en marcos del navegador, sin desbordamiento horizontal.
+- [x] Estado de continuidad en `docs/ESTADO.json`; Google real sigue pendiente.

@@ -40,5 +40,35 @@
   "mainUrl": "https://nespinozagonzalez-hub.github.io/bestiarum/#refugio",
   "mainCommit": "3c2b060fd23c22097c820d44f1b78b5af2129b0f",
   "deployment": "GitHub Pages completed / success",
-  "mainVerifiedAt": "2026-10-17T11:24:11.700300+00:00"
+  "mainVerifiedAt": "2026-10-17T11:24:11.700300+00:00",
+  "campaignReview": {
+    "date": "2026-10-17T12:56:47.279917+00:00",
+    "baseCommit": "068c2230493cdf405a5f0af262b21022da16c9d6",
+    "checks": [
+      "Prólogo antes del registro y reanudación tras registro",
+      "Captura original NUCLEO-7: +50 XP, ceremonia y ficha",
+      "Farol forjado revela pista; decisión persiste tras recargar",
+      "Crónicas, lector y taller sin desbordamiento horizontal en marcos de 320,390,768 px"
+    ],
+    "responsiveCampaign": {
+      "320": {
+        "documentClient": 305,
+        "documentScroll": 305,
+        "storyClient": 287,
+        "storyScroll": 287
+      },
+      "390": {
+        "documentClient": 375,
+        "documentScroll": 375,
+        "storyClient": 369,
+        "storyScroll": 369
+      },
+      "768": {
+        "documentClient": 753,
+        "documentScroll": 753,
+        "storyClient": 720,
+        "storyScroll": 720
+      }
+    }
+  }
 }
