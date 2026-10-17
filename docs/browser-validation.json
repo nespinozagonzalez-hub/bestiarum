@@ -36,5 +36,9 @@
   "limits": [
     "No sustituye pruebas físicas en todos los teléfonos.",
     "El viaje real a Google Sheets requiere publicar la aplicación web y configurar su URL."
-  ]
+  ],
+  "mainUrl": "https://nespinozagonzalez-hub.github.io/bestiarum/#refugio",
+  "mainCommit": "3c2b060fd23c22097c820d44f1b78b5af2129b0f",
+  "deployment": "GitHub Pages completed / success",
+  "mainVerifiedAt": "2026-10-17T11:24:11.700300+00:00"
 }

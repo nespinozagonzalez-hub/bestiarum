@@ -49,6 +49,7 @@ Las pruebas registradas en `validation.json` se ejecutaron con eventos del contr
 - [x] Revisar los tamaños de 320, 390 y 768 píxeles, sin desbordamiento horizontal en las vistas comprobadas.
 - [x] Confirmar portada, cazadores, territorios, bestiario y una captura completa con ceremonia y ficha.
 - [x] Publicar la vista de revisión y comprobar una captura real en el navegador.
+- [x] Publicar la versión principal y confirmar el despliegue exitoso de GitHub Pages.
 
 ## Usuarios y Sheets: implementación y activación
 
