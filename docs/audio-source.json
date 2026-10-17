@@ -1,0 +1,8 @@
+{
+  "title": "Vigilia del Gremio",
+  "durationSeconds": 64,
+  "format": "MP3 64 kbps stereo",
+  "file": "assets/audio/vigilia-del-gremio.mp3",
+  "source": "Original procedural composition: sustained minor chords and bell motifs, no third-party samples",
+  "playback": "Starts after the user presses the music control. Loop, pause, volume and error state are implemented."
+}

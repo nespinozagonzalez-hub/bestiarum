@@ -70,5 +70,46 @@
         "storyScroll": 720
       }
     }
+  },
+  "immersion33": {
+    "date": "2026-10-17T13:42:53.336449+00:00",
+    "commit": "7125045e30358f8e94af0fb609b0c3d000deb6cf",
+    "publishedVersion": "3.3.0",
+    "method": "Interacción con Chrome remoto sobre GitHub Pages publicado",
+    "checks": [
+      "Cuatro imágenes diferentes del prólogo; imagen de Kael cargada a 1600 px",
+      "Audio real: readyState 4, paused false, currentTime 9.665426 segundos",
+      "Acceso visible desde portada; usuario y código de seis números pendientes de conexión, sin alta ficticia",
+      "Origen ilustrado cambia a Ciénaga del Velo",
+      "Registro y tres primeros pasos en refugio",
+      "Menú Más permite navegar a las nueve vistas",
+      "Nueve vistas sin desbordamiento horizontal en 320,390 y768 px",
+      "Lector con texto grande ocupa el alto del marco y no desborda en los tres tamaños"
+    ],
+    "readerSizes": [
+      {
+        "width": 320,
+        "client": 305,
+        "scroll": 305,
+        "height": 740
+      },
+      {
+        "width": 390,
+        "client": 375,
+        "scroll": 375,
+        "height": 844
+      },
+      {
+        "width": 768,
+        "client": 768,
+        "scroll": 768,
+        "height": 900
+      }
+    ],
+    "limits": [
+      "En Chrome remoto y en los marcos probados, la pantalla completa nativa no se concedió: se verificó el lector ampliado como alternativa, sin alerta de error.",
+      "No sustituye una prueba física de audio y pantalla completa en iPhone.",
+      "La autenticación real en Google sigue pendiente de la URL /exec."
+    ]
   }
 }

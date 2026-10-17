@@ -96,4 +96,6 @@ Esta entrega conserva el ciclo original de cacería y captura. No incorpora cues
 - [x] Conexión pendiente indicada; no se crea una cuenta ficticia ni se guarda el código localmente.
 - [x] Origen ilustrado, tres primeros pasos y menú móvil para las nueve secciones.
 - [x] 62 comprobaciones automáticas aprobadas, incluidas diez de inmersión.
-- [ ] Comprobar visualmente el despliegue 3.3 y la reproducción real del archivo.
+- [x] Comprobar visualmente el despliegue 3.3 y la reproducción real del archivo.
+- [x] Nueve pantallas y lector ampliado comprobados a 320, 390 y 768 px en Chrome remoto.
+- [ ] Prueba física de sonido/pantalla completa en iPhone y conexión real a Google.

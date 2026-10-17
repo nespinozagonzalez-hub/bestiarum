@@ -1,7 +1,7 @@
 {
   "project": "Bestiarium · Crónicas del Gremio",
   "version": "3.3.0",
-  "updatedAt": "2026-10-17T13:36:50.611147+00:00",
+  "updatedAt": "2026-10-17T13:42:53.336449+00:00",
   "repository": "nespinozagonzalez-hub/bestiarum",
   "branch": "main",
   "url": "https://nespinozagonzalez-hub.github.io/bestiarum/",
@@ -36,7 +36,7 @@
       "Farol forjado revela pista; decisión persiste tras recargar",
       "Crónicas, lector y taller sin desbordamiento horizontal en marcos de 320,390,768 px"
     ],
-    "browser33": "Pendiente de revisión del nuevo despliegue"
+    "browser33": "Verificado en Chrome remoto: audio real, imágenes, lector ampliado y nueve vistas en 320/390/768 px. Ver docs/browser-validation.json."
   },
   "pending": [
     "Ejecutar setupBestiarium y publicar Apps Script desde Google",
