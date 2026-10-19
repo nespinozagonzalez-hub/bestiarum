@@ -1,7 +1,7 @@
 {
   "project": "Bestiarium · Crónicas del Gremio",
-  "version": "3.4.0",
-  "updatedAt": "2026-10-19T01:04:48.445694+00:00",
+  "version": "3.5.0",
+  "updatedAt": "2026-10-19T01:16:39.472182+00:00",
   "repository": "nespinozagonzalez-hub/bestiarum",
   "branch": "main",
   "url": "https://nespinozagonzalez-hub.github.io/bestiarum/",
@@ -17,15 +17,19 @@
     "Lector inmersivo con vista libro, tamaño de texto, teclado y ampliación compatible",
     "46 escenas con ilustraciones alternadas y 13 nuevas ilustraciones narrativas",
     "Música original de 64 segundos en bucle con pausa y volumen",
-    "Acceso visible de usuario y código de seis números; pendiente de conexión real",
     "Origen ilustrado, primeros pasos y menú móvil de nueve secciones",
     "Google Apps Script real conectado con usuario y código de seis números",
     "Alta directa desde la portada sin partida local previa",
     "Ventana de carga al recuperar, registrar y confirmar acciones",
-    "Reintento tras fallo de red sin mezclar crónicas locales y cuentas"
+    "Reintento tras fallo de red sin mezclar crónicas locales y cuentas",
+    "Inicio con dos opciones: crear usuario y cazador, o continuar historia",
+    "Alta conjunta de cuenta y personaje con errores visibles y código de seis números",
+    "Historia accesible dentro de la aventura tras el registro",
+    "Copia local automática de acciones confirmadas, sin PIN/token ni botón de guardado",
+    "Salida y sesión inválida vuelven al acceso sin entrar en otra partida local"
   ],
   "validation": {
-    "automatedChecks": 68,
+    "automatedChecks": 72,
     "suites": [
       "tests/state.cjs",
       "tests/backend.cjs",
@@ -43,7 +47,8 @@
     ],
     "browser33": "Verificado en Chrome remoto: audio real, imágenes, lector ampliado y nueve vistas en 320/390/768 px. Ver docs/browser-validation.json.",
     "liveConnection": "Prueba real de API con dos sesiones independientes, captura, forja y lectura; ver live-connection-validation.json",
-    "browser34": "Portada y formulario conectado comprobados en Chrome; marcos de 320,390,768 px sin desbordamiento."
+    "browser34": "Portada y formulario conectado comprobados en Chrome; marcos de 320,390,768 px sin desbordamiento.",
+    "liveOnboarding": "Eventos del formulario 3.5 contra Google real y recuperación en otra sesión; ver live-onboarding-validation.json"
   },
   "pending": [
     "Prueba física del usuario en dos dispositivos",

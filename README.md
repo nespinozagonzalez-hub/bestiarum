@@ -1,6 +1,6 @@
 # Bestiarium · Crónicas del Gremio
 
-Remasterización 3.4 de la experiencia de cacería y colección. Fantasía oscura original, 22 bestias, seis territorios y seis rangos de cazador. Publicación estática, sin compilación ni dependencias de producción.
+Remasterización 3.5 de la experiencia de cacería y colección. Fantasía oscura original, 22 bestias, seis territorios y seis rangos de cazador. Publicación estática, sin compilación ni dependencias de producción.
 
 ## Abrir
 
@@ -27,13 +27,17 @@ El orden sigue siendo código inicial de cacería → desafío externo → códi
 
 Las cuatro sendas definen identidad narrativa. No anuncian ni conceden bonificaciones numéricas. Las ocho insignias reconocen hitos del progreso existente y no modifican las recompensas.
 
-## Partidas anteriores
+## Acceso y guardado automático
 
-La clave continúa siendo `bestiariumV25`. Antes de leer una partida anterior se conserva una copia en `bestiariumV25.pre-remaster`. No se recalculan XP ni inventario. El respaldo descargable es un archivo de conservación; no se habilita su importación automática. El sistema no borra partidas para cambiar la apariencia.
+La portada tiene dos opciones: crear usuario y cazador, o continuar la historia. La inscripción solicita un usuario, un código personal de seis números y la identidad del personaje en un solo formulario. El prólogo se abre después de la creación. Todas las crónicas se consultan dentro de la aventura.
 
-## Cuentas y Sheets: listo para instalar
+El cliente está conectado al Apps Script desplegado mediante `assets/js/config.js`. Cada acción confirmada genera una copia local de la crónica en `bestiarium.chronicle.v35`, sin PIN ni token. El servidor conserva el progreso que se recupera al entrar desde otro dispositivo. La sesión dura doce horas y se mantiene en `sessionStorage`; la copia local no concede acceso a otra cuenta.
 
-El backend y la interfaz de usuarios están implementados y comprobados en simulación. `backend/Code.gs` crea las cinco pestañas y valida sesiones, capturas y recompensas. La guía es `backend/INSTALACION.md`. La URL de despliegue está vacía en `assets/js/config.js`: hasta publicar Apps Script en la cuenta de Google, el juego conserva el guardado local.
+La antigua partida `bestiariumV25` y su copia previa permanecen intactas. No se importan recompensas sin validación del servidor. El guardado no requiere botones, descargas ni elegir un modo local.
+
+## Cuentas y Sheets
+
+`backend/Code.gs` crea las cinco pestañas y valida sesiones, capturas y recompensas. La guía está en `backend/INSTALACION.md`. La versión 3.5 modifica el cliente y no requiere volver a desplegar el script. `tests/live-onboarding.cjs` prueba el formulario nuevo contra el servicio real con una cuenta QA identificada; no registra códigos personales ni tokens.
 
 ## Comprobación
 

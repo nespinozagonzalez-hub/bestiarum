@@ -13,7 +13,8 @@ function make(old,quotaBackup=false,preview=false){
  w.HTMLDialogElement.prototype.close=function(){this.open=false;};
  if(old)w.localStorage.setItem('bestiariumV25',typeof old==='string'?old:JSON.stringify(old));
  if(quotaBackup){const original=w.Storage.prototype.setItem;w.Storage.prototype.setItem=function(k,v){if(k==='bestiariumV25.pre-remaster')throw Error('quota');return original.call(this,k,v);};}
- for(const s of scripts)w.eval(s);
+ // Exercise legacy game rules without a remote service; connected entry is tested in accounts.cjs.
+ for(const [i,s] of scripts.entries()){if(i===4)w.BESTIARIUM_REMOTE.url='';w.eval(s);}
  const $=s=>w.document.querySelector(s);
  const click=s=>{assert($(s),'Missing '+s);$(s).click();};
  const submit=s=>$(s).dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));
@@ -23,7 +24,7 @@ function make(old,quotaBackup=false,preview=false){
  const hunt=code=>{nav('contratos');value('#huntCode',code);submit('#huntForm');};
  const capture=code=>{value('#captureCode',code);submit('#captureForm');};
  const ceremony=()=>{for(let i=0;i<3;i++)click('#ceremonyNext');click('#detailDialog .dialog-close');};
- const register=(name='Escuadrón Niebla')=>{click('[data-action="register"]');value('#playerName',name);click('[data-avatar="hunter-3"]');value('#classSelect','guardian');value('#originSelect','forja');submit('#registrationForm');};
+ const register=(name='Escuadrón Niebla')=>{click('[data-account="signup"]');value('#playerName',name);click('[data-avatar="hunter-3"]');value('#classSelect','guardian');value('#originSelect','forja');submit('#registrationForm');};
  return {dom,w,$,click,submit,value,state,nav,hunt,capture,ceremony,register};
 }
 const t=make(),D=t.w.BESTIARIUM;

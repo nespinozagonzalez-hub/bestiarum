@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-19T01:03:36.635Z",
+  "date": "2026-10-19T01:15:01.671Z",
   "method": "Reglas compartidas, servidor Apps Script simulado y eventos de interfaz en jsdom",
   "checks": [
     "15 capítulos: solo el prólogo está disponible al comenzar; bloqueos y páginas validados",
@@ -11,7 +11,7 @@
     "Servidor valida campaña, ignora inventario cliente y conserva idempotencia por operación",
     "Migración aprobada recompone recompensas y descuenta materiales ya gastados en la forja",
     "Faro cooperativo deriva hitos agregados sin publicar identidades ni usuarios",
-    "Interfaz: prólogo antes del registro, bienvenida, capítulos bloqueados y lectura consultable",
+    "Interfaz: prólogo después del personaje, capítulos bloqueados y lectura consultable",
     "Interfaz: forjar equipa, el farol revela pista y una elección queda conservada",
     "Guardado conserva lectura, forja y elección junto a las capturas originales"
   ]

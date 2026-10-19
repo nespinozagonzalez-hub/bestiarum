@@ -24,11 +24,11 @@ Los códigos originales y sus contenidos asociados se conservan en `catalogo-doc
 
 Quimerax conserva sus seis requisitos: virulox, bacillus, osmogarra, cromavorax, mitocrix y hormonarca. El aviso de requisitos pendientes identifica registros y territorios sin revelar los nombres de las bestias desconocidas.
 
-## Progreso y respaldo
+## Progreso y guardado automático
 
-El progreso permanece en el mismo navegador. El selector de apariencia y juramento conserva todas las capturas. Ajustes y guía permite descargar un respaldo JSON. Si el almacenamiento del navegador falla, el cambio se revierte y aparece un aviso; no se anuncia como guardado.
+El jugador crea su usuario, código personal de seis números y personaje desde la portada. La historia se abre dentro de su aventura. Cada acción confirmada conserva el avance en Google y en una copia local automática; no debe descargar respaldos ni elegir un modo de guardado. En otro dispositivo entra con el mismo usuario y código.
 
-El archivo descargado no se importa automáticamente: la migración futura a cuentas debe verificarse contra un registro autorizado. No se ha habilitado un botón de reinicio destructivo.
+La partida local anterior no se borra ni se mezcla automáticamente con la cuenta. Su incorporación requiere revisión autorizada en el Gremio. Cambiar apariencia y juramento conserva las capturas.
 
 ## Arte
 

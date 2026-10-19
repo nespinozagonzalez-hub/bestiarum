@@ -1,12 +1,16 @@
 {
-  "date": "2026-10-19T01:03:35.724Z",
-  "method": "Interfaz y controlador conectados al servidor Apps Script simulado, sin tráfico a Google",
+  "date": "2026-10-19T01:17:03.400Z",
+  "method": "Flujo real de eventos DOM con backend Apps Script simulado; pruebas de acceso, personaje y copia local automática",
   "checks": [
-    "Crear cuenta desde la interfaz recupera estado remoto y limpia la clave",
-    "Cacería y captura usan el servidor; no sobrescriben la crónica local",
-    "La forja y la página leída se guardan en servidor sin mezclar progreso local",
-    "Salir recupera la crónica local sin mezclar usuarios",
-    "Volver a entrar recupera capturas y XP del servidor",
-    "Una sesión revocada no degrada a guardado local con progreso remoto"
+    "Inicio con dos caminos, sin historia exterior ni elección de guardado, incluso con partida local anterior",
+    "Una sola inscripción crea usuario normalizado, código con cero inicial y personaje elegido; el prólogo comienza dentro",
+    "Captura confirmada guarda copia local automáticamente y conserva intacta la crónica anterior",
+    "Lectura, equipo y avance generan guardado local automático sin botón ni mezcla con otra partida",
+    "Editar personaje no exige volver a crear credenciales y conserva capturas y recompensas",
+    "Cerrar sesión vuelve al inicio sin entrar automáticamente en otra crónica local",
+    "Continuar recupera cuenta, personaje y avance y no reinicia el prólogo",
+    "Sesión revocada devuelve al acceso sin convertir el progreso remoto en una partida local",
+    "Usuario existente muestra cómo continuar y conserva el formulario para corregir el registro",
+    "Formato de usuario inválido explica el problema junto al formulario sin enviar un registro"
   ]
 }

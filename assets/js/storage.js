@@ -1,4 +1,4 @@
-/* Local persistence adapter. No remote authentication is simulated in this release. */
+/* Local legacy-state adapter and device preferences; account snapshots live in accounts.js. */
 'use strict';
 window.GuildStorage = (() => {
  const KEY='bestiariumV25',BACKUP='bestiariumV25.pre-remaster',PREFS='bestiarium.preferences.v3';

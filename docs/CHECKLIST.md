@@ -69,7 +69,7 @@ Esta entrega conserva el ciclo original de cacería y captura. No incorpora cues
 - [x] Crónicas del Velo: 15 capítulos con páginas guardadas y relectura.
 - [x] Forja, equipo, cuatro talentos y cinco investigaciones.
 - [x] Reliquias, refugio personalizable y territorio restaurado.
-- [x] Faro cooperativo preparado en servidor; requiere activar Google.
+- [x] Faro cooperativo conectado al servidor.
 - [x] Checklist detallada de campaña en [CAMPANA.md](CAMPANA.md).
 
 ## Recuperación y estabilidad 3.2.1
@@ -81,7 +81,7 @@ Esta entrega conserva el ciclo original de cacería y captura. No incorpora cues
 - [x] 52 comprobaciones automáticas aprobadas, sin contar ejecuciones repetidas del backend.
 - [x] Campaña revisada en navegador publicado: prólogo, captura, forja, pista y decisión recuperada tras recarga.
 - [x] Crónicas, lector y taller revisados a 320, 390 y 768 px en marcos del navegador, sin desbordamiento horizontal.
-- [x] Estado de continuidad en `docs/ESTADO.json`; Google real sigue pendiente.
+- [x] Estado de continuidad en `docs/ESTADO.json`; conexión real documentada desde 3.4.
 
 ## Inmersión y navegación 3.3
 
@@ -98,7 +98,7 @@ Esta entrega conserva el ciclo original de cacería y captura. No incorpora cues
 - [x] 62 comprobaciones automáticas aprobadas, incluidas diez de inmersión.
 - [x] Comprobar visualmente el despliegue 3.3 y la reproducción real del archivo.
 - [x] Nueve pantallas y lector ampliado comprobados a 320, 390 y 768 px en Chrome remoto.
-- [ ] Prueba física de sonido/pantalla completa en iPhone y conexión real a Google.
+- [ ] Prueba física de sonido/pantalla completa en iPhone.
 
 ## Usuarios conectados 3.4
 
@@ -109,3 +109,16 @@ Esta entrega conserva el ciclo original de cacería y captura. No incorpora cues
 - [x] Reintentos y fallos de red devuelven el control sin mezclar partidas.
 - [x] 68 comprobaciones automáticas y prueba real de API con dos sesiones independientes.
 - [x] Revisión visual del despliegue 3.4: registro activo, formulario móvil y dimensiones de carga.
+
+## Entrada y guardado automático 3.5
+
+- [x] Portada con crear usuario y cazador, o continuar historia.
+- [x] Usuario, código personal y personaje en un solo formulario.
+- [x] Prólogo y demás capítulos dentro de la aventura.
+- [x] Errores de registro junto al formulario, conservando datos para corregir.
+- [x] Espera de conexión ampliada a 60 segundos, sin doble envío.
+- [x] Copia local automática de cada estado confirmado, sin PIN ni token.
+- [x] Sin selector de partida local ni descarga manual de respaldo.
+- [x] Sesión terminada vuelve al acceso, sin abrir una crónica ajena.
+- [x] 72 comprobaciones automáticas aprobadas (backend contado una sola vez).
+- [ ] Revisión visual final del despliegue 3.5.

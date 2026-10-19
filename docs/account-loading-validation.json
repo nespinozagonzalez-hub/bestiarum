@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-19T01:02:54.762Z",
+  "date": "2026-10-19T01:17:02.129Z",
   "method": "DOM y servidor simulado con respuesta demorada, rechazo de red y reintentos",
   "checks": [
     "Registro desde portada sin partida previa: crea perfil válido y muestra carga bloqueando doble envío",
     "Código con cero inicial aceptado; la carga termina con la cuenta creada y el código borrado",
-    "Recargar con sesión recupera el avance del servidor mediante la ventana de carga",
+    "Recargar recupera la copia local de la misma cuenta y confirma el avance del servidor mediante la carga",
     "Fallo de red cierra la carga, mantiene la última crónica y permite reintentar",
     "Reintentar sincronización recupera el estado y vuelve a habilitar los controles",
     "Código erróneo cierra la carga y deja el acceso disponible sin entrar en otra cuenta"

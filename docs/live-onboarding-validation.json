@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-19T01:16:34.529Z",
+  "method": "Eventos DOM del frontend 3.5 con peticiones reales al Apps Script, dos sesiones sin almacenamiento compartido",
+  "qaUsername": "qa_ui_10190115_1f63",
+  "checks": [
+    "Formulario nuevo crea realmente usuario y personaje elegido en el Apps Script desplegado y abre el prólogo",
+    "Avanzar en la historia guarda realmente la página en el servicio y su copia local automática",
+    "Otra sesión sin almacenamiento previo recupera personaje y página de lectura desde Google",
+    "Respuestas POST permiten el origen del juego; las dos sesiones de prueba quedan cerradas"
+  ],
+  "requests": [
+    {
+      "action": "register",
+      "cors": "*",
+      "status": 200
+    },
+    {
+      "action": "campaign",
+      "cors": "*",
+      "status": 200
+    },
+    {
+      "action": "login",
+      "cors": "*",
+      "status": 200
+    },
+    {
+      "action": "logout",
+      "cors": "*",
+      "status": 200
+    },
+    {
+      "action": "logout",
+      "cors": "*",
+      "status": 200
+    }
+  ],
+  "limits": [
+    "HTTP verifica cabeceras CORS; el formulario publicado se revisa visualmente por separado. No sustituye una prueba física en el dispositivo del usuario."
+  ]
+}

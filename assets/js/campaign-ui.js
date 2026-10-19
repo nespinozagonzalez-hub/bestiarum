@@ -43,7 +43,7 @@
  }
  function closeStory(){if($('#storyDialog').open)$('#storyDialog').close();story=null;if(document.fullscreenElement)document.exitFullscreen?.().catch(()=>{});}
 
- function openStory(id){const ch=C.chapters.find(c=>c.id===id);if(!ch||!C.available(ch,S,D.monsters))return;closeDetails();story={id,page:cp().read.includes(id)?0:cp().pages[id]||0};showStory();$('#storyDialog').showModal();focusReader();}
+ function openStory(id){if(window.GuildAccount?.configured&&!GuildAccount.isActive())return;const ch=C.chapters.find(c=>c.id===id);if(!ch||!C.available(ch,S,D.monsters))return;closeDetails();story={id,page:cp().read.includes(id)?0:cp().pages[id]||0};showStory();$('#storyDialog').showModal();focusReader();}
  async function advanceStory(action){
   if(!story)return;
   if(action==='close'){closeStory();return;}

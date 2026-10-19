@@ -1,11 +1,13 @@
-# Usuarios y Google Sheets · conexión activada
+# Usuarios, personaje y guardado automático · 3.5
 
-La URL `/exec` está configurada en `assets/js/config.js`. El servicio responde `ready: true` y permite crear cuentas desde la portada y recuperar la crónica con el mismo usuario y código de seis números.
+La URL `/exec` está configurada y responde. Crear usuario y cazador es un único formulario: usuario, código de seis números, nombre del personaje, apariencia, senda y origen. El prólogo comienza después de registrar la cuenta. La otra opción de portada recupera la historia existente.
 
-El progreso de la cuenta se confirma en Google; el guardado local anterior se conserva aparte. Una sesión de doce horas se conserva durante la sesión del navegador; en otro navegador o dispositivo se vuelve a entrar con las mismas credenciales.
+El avance confirmado se conserva automáticamente en Google y en `bestiarium.chronicle.v35`. Esta copia local solo contiene identificación y progreso, nunca PIN ni token. La sesión de doce horas se mantiene en `sessionStorage`. Entrar desde otro navegador recupera el estado del servidor; una sesión terminada vuelve al acceso y no abre otra partida local.
 
-El informe `live-connection-validation.json` registra las pruebas reales. La cuenta cuyo nombre empieza por `qa_bst_` se creó únicamente para validar el despliegue. Su código de acceso y sus tokens no se publican; ambas sesiones de prueba se cierran al terminar.
+Los errores se muestran junto al formulario, conservan los datos para corregirlos y explican cuándo continuar con un usuario existente. Las consultas esperan hasta 60 segundos para tolerar el arranque de Apps Script; no se repite un registro automáticamente.
 
-La ventana de carga muestra la consulta al iniciar sesión, recuperar el avance y confirmar las acciones. Un fallo de red devuelve el control y conserva la última crónica disponible.
+Las partidas antiguas y `bestiariumV25.pre-remaster` permanecen intactas. Su migración no acredita recompensas sin revisión.
 
-No hace falta modificar ni volver a desplegar `Code.gs` para esta activación del cliente.
+Informes: `accounts-validation.json`, `account-loading-validation.json`, `live-onboarding-validation.json`. La cuenta QA del último informe comprueba el alta real y dos sesiones independientes; ambas se cierran al finalizar. No se guardan credenciales de prueba.
+
+No hace falta modificar ni desplegar otra vez `Code.gs`.

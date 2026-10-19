@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-19T01:03:38.485Z",
+  "date": "2026-10-19T01:15:01.588Z",
   "method": "Eventos DOM, medio de audio simulado, fallback de pantalla completa rechazado y archivos reales",
   "checks": [
     "46 escenas con archivos de imagen válidos y sin repetir imagen dentro de cada capítulo",
@@ -8,7 +8,7 @@
     "Cerrar y reabrir conserva página, tamaño del texto y vista de lectura",
     "El botón de música inicia un archivo real en bucle y confirma reproducción",
     "Pausa y rechazo de reproducción no dejan un indicador falso de sonido activo",
-    "Acceso de seis números visible sin fingir una cuenta conectada antes de Google",
+    "Acceso conserva validación de seis números y no habilita un servicio sin configurar",
     "Origen ilustrado y tres primeros pasos conducen al nuevo jugador al refugio",
     "Menú móvil abre las nueve secciones y se cierra al elegir la forja",
     "Volumen de música ajustable y persistente"

@@ -6,11 +6,11 @@ const w=dom.window,$=s=>w.document.querySelector(s),tick=()=>new Promise(r=>setT
 w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};
 w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};
 w.HTMLDialogElement.prototype.close=function(){this.open=false;};
-for(const name of ['config','catalog','campaign','storage','accounts','app'])w.eval(fs.readFileSync('assets/js/'+name+'.js','utf8'));
+for(const name of ['config','catalog','campaign','storage','accounts','app']){if(name==='accounts')w.BESTIARIUM_REMOTE.url='';w.eval(fs.readFileSync('assets/js/'+name+'.js','utf8'));}
 const click=s=>{assert($(s),'Missing '+s);$(s).click();};
 const ok=t=>{checks.push(t);console.log('PASS',t);};
 (async()=>{
- click('[data-action="register"]');$('#playerName').value='Revisión';
+ click('[data-account="signup"]');$('#playerName').value='Revisión';
  $('#registrationForm').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));
  click('[data-story="close"]');
  const saved=JSON.parse(w.localStorage.getItem('bestiariumV25'));
