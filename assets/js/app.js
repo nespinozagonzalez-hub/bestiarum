@@ -23,7 +23,7 @@
  const fmtDate=t=>new Date(t).toLocaleDateString('es-CL',{day:'2-digit',month:'short',year:'numeric'});
  function fillIcons(root=document){root.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=icon(el.dataset.icon));}
  function toast(text){$('#toast').textContent=text;$('#toast').classList.add('visible');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').classList.remove('visible'),4600);}
- function saveStatus(){const el=$('#saveStatus');if(window.GuildAccount?.isActive()){const st=GuildAccount.getStatus();el.textContent=['saving','loading'].includes(st)?'Consultando los archivos del Gremio…':st==='error'?'Sin confirmar conexión. Tu última crónica sigue disponible.':'✓ Guardado automático';el.classList.toggle('error',st==='error');return;}const error=GuildStorage.getStatus()==='error';el.textContent=error?'No se pudo guardar. Revisa el almacenamiento del navegador.':S.introSeen?'✓ Guardado automático':'Tu crónica comienza aquí.';el.classList.toggle('error',error);}
+ function saveStatus(){const el=$('#saveStatus');if(window.GuildAccount?.isActive()){const st=GuildAccount.getStatus(),localError=GuildAccount.getCacheStatus()==='error';el.textContent=['saving','loading'].includes(st)?'Consultando los archivos del Gremio…':st==='error'?'Sin confirmar conexión. Tu última crónica sigue disponible.':localError?'Guardado en el Gremio; copia local no disponible.':'✓ Guardado automático';el.classList.toggle('error',st==='error'||localError);return;}const error=GuildStorage.getStatus()==='error';el.textContent=error?'No se pudo guardar. Revisa el almacenamiento del navegador.':S.introSeen?'✓ Guardado automático':'Tu crónica comienza aquí.';el.classList.toggle('error',error);}
  function mutate(fn){const previous=JSON.stringify(S);fn();if(!GuildStorage.save(S)){S=JSON.parse(previous);toast('No se pudo guardar el cambio. Libera espacio en el navegador y vuelve a intentarlo.');return false;}return true;}
  function screen(id){['intro','registration','app'].forEach(s=>$('#'+s).hidden=s!==id);window.scrollTo(0,0);}
  function heading(kicker,title,subtitle,action=''){return `<header class="page-heading"><div><p class="eyebrow">${kicker}</p><h1>${title}</h1><p class="subtitle">${subtitle}</p></div>${action}</header>`;}
@@ -62,6 +62,7 @@
  function register(edit=false){
   editing=edit;const online=!!window.GuildAccount?.configured;
   $('#signupAccess').hidden=edit||!online;$('#signupAccess').disabled=edit||!online;
+  $('#registrationForm [data-account="open"]').hidden=edit;
   $('#registrationTitle').textContent=edit?'Tu cazador y tu juramento':'Crea tu usuario y cazador';
   $('#registrationForm .local-note').textContent='Tu avance se guarda automáticamente. No necesitas pulsar guardar.';
   $('#registrationFeedback').textContent='';chosenAvatar=edit?S.avatar:'hunter-1';
@@ -193,6 +194,7 @@
  $$('#detailDialog,#settingsDialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
  $('#ceremony').addEventListener('cancel',e=>{e.preventDefault();closeCeremony();});
  window.addEventListener('guild:signup',()=>register());
+ window.addEventListener('guild:resume',()=>navigate(current));
  window.addEventListener('guild:audio',applyPrefs);window.GuildAudio?.volume(P.volume??.22);
  window.addEventListener('guild:account-status',saveStatus);
  window.addEventListener('guild:account-message',e=>toast(e.detail));

@@ -127,5 +127,40 @@
       "Las credenciales no se introdujeron en el navegador de revisión. Los flujos completos se verificaron con servidor simulado y con peticiones reales a Google por separado.",
       "Dos sesiones independientes de API comprobadas; no se afirma prueba física en dos dispositivos."
     ]
+  },
+  "accounts35": {
+    "date": "2026-10-19T02:14:43.101799+00:00",
+    "method": "Chrome remoto, UI publicada y lectura de medidas DOM en marcos adaptables",
+    "checks": [
+      "Portada con solo crear usuario y cazador, o continuar historia",
+      "Registro único con acceso y personaje; código de seis números habilitado",
+      "Sin historia ni entrada local alternativa en portada",
+      "Imágenes del personaje y origen cargadas",
+      "Sin desbordamiento horizontal en 320,390,768 px"
+    ],
+    "measurements": [
+      {
+        "frame": 320,
+        "viewport": 305,
+        "scrollWidth": 305,
+        "formWidth": 267
+      },
+      {
+        "frame": 390,
+        "viewport": 375,
+        "scrollWidth": 375,
+        "formWidth": 337
+      },
+      {
+        "frame": 768,
+        "viewport": 753,
+        "scrollWidth": 753,
+        "formWidth": 347.5
+      }
+    ],
+    "limits": [
+      "No se ingresaron credenciales en el navegador remoto. El alta y recuperación reales se comprobaron mediante los eventos del controlador y HTTP: live-onboarding-validation.json.",
+      "Los marcos adaptables no sustituyen una prueba física en iPhone."
+    ]
   }
 }

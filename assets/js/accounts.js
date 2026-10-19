@@ -85,7 +85,7 @@ window.GuildAccount=(()=>{
   },true);
   document.addEventListener('click',async e=>{
    const el=e.target.closest('[data-account]');if(!el)return;const action=el.dataset.account;
-   if(action==='open'){open();return;}
+   if(action==='open'){if(session&&el.closest('#intro'))window.dispatchEvent(new CustomEvent('guild:resume'));else open();return;}
    if(action==='signup'){if(busy)return;if(session){open();return;}const d=document.getElementById('accountDialog');if(d.open)d.close();window.dispatchEvent(new CustomEvent('guild:signup'));return;}
    if(action==='close'){document.getElementById('accountDialog').close();return;}
    if(action==='logout'){

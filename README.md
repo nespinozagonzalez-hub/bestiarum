@@ -44,11 +44,11 @@ La antigua partida `bestiariumV25` y su copia previa permanecen intactas. No se 
 Las 18 comprobaciones funcionales ejecutadas con un DOM simulado están registradas en `docs/validation.json`. Se reproducen con Node y jsdom mediante `node tests/state.cjs` (o la variable `BESTIARIUM_JSDOM` apuntando al módulo). Cubren captura, duplicaciones, jefe final, colección completa, persistencia y migración. La revisión visual del navegador se registra por separado en la checklist. `tests/regression.cjs` contiene una suite adicional de Playwright; no se presenta como ejecutada cuando no hay un navegador local disponible. No se ha probado físicamente cada modelo de teléfono.
 
 
-El backend añade 11 pruebas y su integración con la interfaz otras cinco: `node tests/backend.cjs` y `node tests/accounts.cjs` (con jsdom disponible). Los registros están en `docs/backend-validation.json`, `docs/accounts-validation.json` y `docs/browser-validation.json`.
+El backend añade 11 pruebas y su integración con la interfaz otras diez: `node tests/backend.cjs` y `node tests/accounts.cjs` (con jsdom disponible). Los registros están en `docs/backend-validation.json`, `docs/accounts-validation.json` y `docs/browser-validation.json`.
 
 ## Campaña 3.2: Las Crónicas del Velo
 
-Quince capítulos ilustrados, cinco investigaciones, ocho recetas, equipo, talentos, reliquias y refugio personalizable. Consulta la [checklist de campaña](docs/CAMPANA.md). La activación de Google sigue pendiente: las cuentas y el faro cooperativo necesitan una URL real de Apps Script.
+Quince capítulos ilustrados, cinco investigaciones, ocho recetas, equipo, talentos, reliquias y refugio personalizable. Consulta la [checklist de campaña](docs/CAMPANA.md). Las cuentas y el faro cooperativo están conectados al Apps Script desplegado.
 
 Tras editar las reglas o la interfaz de campaña ejecuta `python scripts/build-campaign.py`. Las pruebas de `tests/campaign.cjs` cubren desbloqueos, lectura, consumo de materiales, decisiones, migración y validación en servidor simulado.
 

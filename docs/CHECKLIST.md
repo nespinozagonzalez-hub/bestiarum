@@ -121,4 +121,4 @@ Esta entrega conserva el ciclo original de cacería y captura. No incorpora cues
 - [x] Sin selector de partida local ni descarga manual de respaldo.
 - [x] Sesión terminada vuelve al acceso, sin abrir una crónica ajena.
 - [x] 72 comprobaciones automáticas aprobadas (backend contado una sola vez).
-- [ ] Revisión visual final del despliegue 3.5.
+- [x] Revisión visual final del despliegue 3.5: portada y formulario; marcos de 320/390/768 px sin desbordamiento.

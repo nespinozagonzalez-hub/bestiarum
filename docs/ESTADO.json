@@ -1,7 +1,7 @@
 {
   "project": "Bestiarium · Crónicas del Gremio",
-  "version": "3.5.0",
-  "updatedAt": "2026-10-19T01:16:39.472182+00:00",
+  "version": "3.5.1",
+  "updatedAt": "2026-10-19T02:14:43.100400+00:00",
   "repository": "nespinozagonzalez-hub/bestiarum",
   "branch": "main",
   "url": "https://nespinozagonzalez-hub.github.io/bestiarum/",
@@ -40,7 +40,7 @@
       "tests/accounts-loading.cjs"
     ],
     "browser": [
-      "Prólogo antes del registro y reanudación tras registro",
+      "Prólogo dentro de la aventura, después de crear usuario y personaje",
       "Captura original NUCLEO-7: +50 XP, ceremonia y ficha",
       "Farol forjado revela pista; decisión persiste tras recargar",
       "Crónicas, lector y taller sin desbordamiento horizontal en marcos de 320,390,768 px"
@@ -48,7 +48,8 @@
     "browser33": "Verificado en Chrome remoto: audio real, imágenes, lector ampliado y nueve vistas en 320/390/768 px. Ver docs/browser-validation.json.",
     "liveConnection": "Prueba real de API con dos sesiones independientes, captura, forja y lectura; ver live-connection-validation.json",
     "browser34": "Portada y formulario conectado comprobados en Chrome; marcos de 320,390,768 px sin desbordamiento.",
-    "liveOnboarding": "Eventos del formulario 3.5 contra Google real y recuperación en otra sesión; ver live-onboarding-validation.json"
+    "liveOnboarding": "Eventos del formulario 3.5 contra Google real y recuperación en otra sesión; ver live-onboarding-validation.json",
+    "browser35": "Portada con dos opciones y formulario conjunto verificados en Chrome remoto; marcos de 320/390/768 px sin desbordamiento. Ver browser-validation.json."
   },
   "pending": [
     "Prueba física del usuario en dos dispositivos",
