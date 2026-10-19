@@ -9,7 +9,7 @@ let playing=false,failAudio=false;
 Object.defineProperty(w.HTMLMediaElement.prototype,'paused',{get:()=>!playing});
 w.HTMLMediaElement.prototype.play=function(){if(failAudio)return Promise.reject(Error('Autoplay blocked'));playing=true;return Promise.resolve();};
 w.HTMLMediaElement.prototype.pause=function(){playing=false;};
-for(const name of ['config','catalog','campaign','storage','accounts','audio','app'])w.eval(fs.readFileSync('assets/js/'+name+'.js','utf8'));
+for(const name of ['config','catalog','campaign','storage','accounts','audio','app']){if(name==='accounts')w.BESTIARIUM_REMOTE.url='';w.eval(fs.readFileSync('assets/js/'+name+'.js','utf8'));}
 const click=s=>{assert($(s),'Missing '+s);$(s).click();};
 (async()=>{
  const chapters=w.GuildCampaign.chapters;

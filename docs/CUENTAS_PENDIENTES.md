@@ -1,5 +1,11 @@
-# Usuarios y Google Sheets
+# Usuarios y Google Sheets · conexión activada
 
-El código del backend y la conexión del cliente están preparados. Consulta [la instalación](../backend/INSTALACION.md) y [el script](../backend/Code.gs).
+La URL `/exec` está configurada en `assets/js/config.js`. El servicio responde `ready: true` y permite crear cuentas desde la portada y recuperar la crónica con el mismo usuario y código de seis números.
 
-Falta ejecutar el instalador y publicar la aplicación web desde la cuenta de Google, pegar la URL `/exec` en `assets/js/config.js` y realizar la prueba real entre dispositivos. La configuración vacía mantiene el guardado local. No se afirma que una hoja remota ya esté conectada.
+El progreso de la cuenta se confirma en Google; el guardado local anterior se conserva aparte. Una sesión de doce horas se conserva durante la sesión del navegador; en otro navegador o dispositivo se vuelve a entrar con las mismas credenciales.
+
+El informe `live-connection-validation.json` registra las pruebas reales. La cuenta cuyo nombre empieza por `qa_bst_` se creó únicamente para validar el despliegue. Su código de acceso y sus tokens no se publican; ambas sesiones de prueba se cierran al terminar.
+
+La ventana de carga muestra la consulta al iniciar sesión, recuperar el avance y confirmar las acciones. Un fallo de red devuelve el control y conserva la última crónica disponible.
+
+No hace falta modificar ni volver a desplegar `Code.gs` para esta activación del cliente.

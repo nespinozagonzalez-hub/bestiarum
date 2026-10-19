@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-19T01:04:26.663792+00:00",
+  "method": "Peticiones reales al Apps Script desplegado, dos sesiones independientes",
+  "serviceVersion": "3.2.0",
+  "qaUsername": "qa_bst_10190101_4764",
+  "checks": [
+    "Servicio público instalado y accesible",
+    "Cuenta de prueba creada con usuario y código de seis números",
+    "Contrato y captura guardados realmente con 50 XP",
+    "Captura repetida no duplica progreso ni recompensas",
+    "Forja y página de lectura guardadas en Google",
+    "Nueva sesión independiente recupera cazador, captura, equipo y lectura",
+    "Cerrar una sesión revoca su acceso y conserva la otra sesión"
+  ],
+  "limits": [
+    "Prueba de API; la revisión del formulario y CORS en navegador se registra por separado."
+  ]
+}

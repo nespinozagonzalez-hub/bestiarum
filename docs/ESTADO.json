@@ -1,7 +1,7 @@
 {
   "project": "Bestiarium · Crónicas del Gremio",
-  "version": "3.3.0",
-  "updatedAt": "2026-10-17T13:42:53.336449+00:00",
+  "version": "3.4.0",
+  "updatedAt": "2026-10-19T01:04:48.445694+00:00",
   "repository": "nespinozagonzalez-hub/bestiarum",
   "branch": "main",
   "url": "https://nespinozagonzalez-hub.github.io/bestiarum/",
@@ -18,17 +18,22 @@
     "46 escenas con ilustraciones alternadas y 13 nuevas ilustraciones narrativas",
     "Música original de 64 segundos en bucle con pausa y volumen",
     "Acceso visible de usuario y código de seis números; pendiente de conexión real",
-    "Origen ilustrado, primeros pasos y menú móvil de nueve secciones"
+    "Origen ilustrado, primeros pasos y menú móvil de nueve secciones",
+    "Google Apps Script real conectado con usuario y código de seis números",
+    "Alta directa desde la portada sin partida local previa",
+    "Ventana de carga al recuperar, registrar y confirmar acciones",
+    "Reintento tras fallo de red sin mezclar crónicas locales y cuentas"
   ],
   "validation": {
-    "automatedChecks": 62,
+    "automatedChecks": 68,
     "suites": [
       "tests/state.cjs",
       "tests/backend.cjs",
       "tests/accounts.cjs",
       "tests/campaign.cjs",
       "tests/recovery.cjs",
-      "tests/immersion.cjs"
+      "tests/immersion.cjs",
+      "tests/accounts-loading.cjs"
     ],
     "browser": [
       "Prólogo antes del registro y reanudación tras registro",
@@ -36,12 +41,12 @@
       "Farol forjado revela pista; decisión persiste tras recargar",
       "Crónicas, lector y taller sin desbordamiento horizontal en marcos de 320,390,768 px"
     ],
-    "browser33": "Verificado en Chrome remoto: audio real, imágenes, lector ampliado y nueve vistas en 320/390/768 px. Ver docs/browser-validation.json."
+    "browser33": "Verificado en Chrome remoto: audio real, imágenes, lector ampliado y nueve vistas en 320/390/768 px. Ver docs/browser-validation.json.",
+    "liveConnection": "Prueba real de API con dos sesiones independientes, captura, forja y lectura; ver live-connection-validation.json"
   },
   "pending": [
-    "Ejecutar setupBestiarium y publicar Apps Script desde Google",
-    "Configurar URL /exec en assets/js/config.js",
-    "Prueba real de sincronización entre dispositivos",
+    "Revisión visual del despliegue 3.4",
+    "Prueba física del usuario en dos dispositivos",
     "Revisión del usuario sobre ritmo, tono y equilibrio"
   ],
   "continuity": "Continuar desde este archivo y verificar main antes de editar. No reiniciar el remaster. No cambiar códigos ni reemplazar el repositorio."

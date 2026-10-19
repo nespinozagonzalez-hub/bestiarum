@@ -1,6 +1,6 @@
 # Bestiarium · Crónicas del Gremio
 
-Remasterización 3.1 de la experiencia de cacería y colección. Fantasía oscura original, 22 bestias, seis territorios y seis rangos de cazador. Publicación estática, sin compilación ni dependencias de producción.
+Remasterización 3.4 de la experiencia de cacería y colección. Fantasía oscura original, 22 bestias, seis territorios y seis rangos de cazador. Publicación estática, sin compilación ni dependencias de producción.
 
 ## Abrir
 
@@ -47,3 +47,9 @@ El backend añade 11 pruebas y su integración con la interfaz otras cinco: `nod
 Quince capítulos ilustrados, cinco investigaciones, ocho recetas, equipo, talentos, reliquias y refugio personalizable. Consulta la [checklist de campaña](docs/CAMPANA.md). La activación de Google sigue pendiente: las cuentas y el faro cooperativo necesitan una URL real de Apps Script.
 
 Tras editar las reglas o la interfaz de campaña ejecuta `python scripts/build-campaign.py`. Las pruebas de `tests/campaign.cjs` cubren desbloqueos, lectura, consumo de materiales, decisiones, migración y validación en servidor simulado.
+
+## Cuentas conectadas
+
+Crear usuario o entrar desde la portada. El código personal tiene seis números. En otro dispositivo se entra con el mismo usuario y código para recuperar capturas, inventario, equipo y lectura. El servicio público de Apps Script está configurado; la hoja permanece privada. El cliente muestra una ventana breve al consultar o guardar y no convierte los fallos de red en un guardado local de la cuenta.
+
+Ver `docs/CUENTAS_PENDIENTES.md`, `docs/live-connection-validation.json` y `docs/account-loading-validation.json`.

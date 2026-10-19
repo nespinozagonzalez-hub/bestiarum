@@ -9,7 +9,7 @@ El código está preparado. La conexión real necesita que publiques la aplicaci
 5. En `assets/js/config.js`, deja `window.BESTIARIUM_REMOTE={url:'TU_URL_EXEC'};` y publica el cambio. La URL es pública; no pegues contraseñas, claves de Google ni tokens de administración.
 6. Abre el juego y entra en **Ajustes y guía → Cuenta del Gremio**. Crea dos usuarios de prueba y confirma que sus capturas son independientes. Recarga, cierra sesión y vuelve a entrar para verificar la recuperación.
 
-Mientras la URL esté vacía, la experiencia funciona con su crónica local y conserva las partidas anteriores. No muestra formularios de acceso que no puedan conectarse.
+Mientras la URL esté vacía, la experiencia funciona con su crónica local y conserva las partidas anteriores. Muestra el estado de conexión junto al formulario de acceso.
 
 ## Lo que hace el backend
 
@@ -43,3 +43,7 @@ El archivo completo incluye las reglas de narrativa, forja, equipo, talentos e i
 ## Interfaz 3.3 lista para conectar
 
 El acceso de usuario y código de seis números se ve desde la portada, el refugio y los ajustes. Hasta configurar `/exec`, los formularios indican que la conexión no está activada y permiten continuar localmente. La música, las ilustraciones y el lector funcionan sin Google. Esta ampliación mantiene las mismas cinco pestañas y las acciones de la campaña; usa el `Code.gs` completo actualizado de esta carpeta.
+
+## Activación completada
+
+El servicio está desplegado y su URL ya está configurada en el cliente 3.4. No se requiere otro cambio en el script. El informe de la prueba real está en `docs/live-connection-validation.json`. La portada permite crear la cuenta directamente o entrar con el mismo usuario y código para recuperar el avance.

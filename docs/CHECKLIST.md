@@ -1,4 +1,4 @@
-# Checklist de la remasterización · Bestiarium 3.3.0
+# Checklist de la remasterización · Bestiarium 3.4.0
 
 ## Implementación
 
@@ -59,7 +59,7 @@ Las pruebas registradas en `validation.json` se ejecutaron con eventos del contr
 - [x] Validación de capturas y recompensas en servidor.
 - [x] Solicitud de migración y aprobación manual del responsable.
 - [x] Once pruebas del servidor y cinco pruebas de integración del cliente con el servidor simulado.
-- [ ] Ejecutar y publicar Apps Script en Google; configurar la URL `/exec`.
+- [x] Ejecutar y publicar Apps Script en Google; configurar la URL `/exec`.
 - [ ] Probar la conexión real entre dispositivos con la hoja desplegada.
 
 Esta entrega conserva el ciclo original de cacería y captura. No incorpora cuestionarios internos ni cambia automáticamente a captura libre por código.
@@ -99,3 +99,13 @@ Esta entrega conserva el ciclo original de cacería y captura. No incorpora cues
 - [x] Comprobar visualmente el despliegue 3.3 y la reproducción real del archivo.
 - [x] Nueve pantallas y lector ampliado comprobados a 320, 390 y 768 px en Chrome remoto.
 - [ ] Prueba física de sonido/pantalla completa en iPhone y conexión real a Google.
+
+## Usuarios conectados 3.4
+
+- [x] Servicio real preparado y URL configurada.
+- [x] Alta directa desde portada con nombre válido aunque no exista partida local.
+- [x] Botones de crear usuario y entrar visibles desde el principio.
+- [x] Ventana de carga contextual para registro, acceso, recuperación y confirmación de acciones.
+- [x] Reintentos y fallos de red devuelven el control sin mezclar partidas.
+- [x] 68 comprobaciones automáticas y prueba real de API con dos sesiones independientes.
+- [ ] Revisión visual del despliegue 3.4.
