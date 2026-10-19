@@ -111,5 +111,21 @@
       "No sustituye una prueba física de audio y pantalla completa en iPhone.",
       "La autenticación real en Google sigue pendiente de la URL /exec."
     ]
+  },
+  "accounts34": {
+    "date": "2026-10-19T01:07:55.087992+00:00",
+    "commit": "a6c745b40ae684a77f4446d00baa558c8fa7dac6",
+    "publishedVersion": "3.4.0",
+    "checks": [
+      "Portada publicada: crear usuario, entrar con código y exploración local",
+      "Formulario de alta activo, código de seis números y botón primario de registro",
+      "Formulario sin desbordamiento en marcos de 320/390/768 px",
+      "Ventana de carga con anchos CSS adaptados de 288/358/410 px",
+      "Servicio real devuelve ready true y cabecera Access-Control-Allow-Origin *"
+    ],
+    "limits": [
+      "Las credenciales no se introdujeron en el navegador de revisión. Los flujos completos se verificaron con servidor simulado y con peticiones reales a Google por separado.",
+      "Dos sesiones independientes de API comprobadas; no se afirma prueba física en dos dispositivos."
+    ]
   }
 }

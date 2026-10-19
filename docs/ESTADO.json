@@ -42,10 +42,10 @@
       "Crónicas, lector y taller sin desbordamiento horizontal en marcos de 320,390,768 px"
     ],
     "browser33": "Verificado en Chrome remoto: audio real, imágenes, lector ampliado y nueve vistas en 320/390/768 px. Ver docs/browser-validation.json.",
-    "liveConnection": "Prueba real de API con dos sesiones independientes, captura, forja y lectura; ver live-connection-validation.json"
+    "liveConnection": "Prueba real de API con dos sesiones independientes, captura, forja y lectura; ver live-connection-validation.json",
+    "browser34": "Portada y formulario conectado comprobados en Chrome; marcos de 320,390,768 px sin desbordamiento."
   },
   "pending": [
-    "Revisión visual del despliegue 3.4",
     "Prueba física del usuario en dos dispositivos",
     "Revisión del usuario sobre ritmo, tono y equilibrio"
   ],

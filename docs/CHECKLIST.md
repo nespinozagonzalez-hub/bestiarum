@@ -108,4 +108,4 @@ Esta entrega conserva el ciclo original de cacería y captura. No incorpora cues
 - [x] Ventana de carga contextual para registro, acceso, recuperación y confirmación de acciones.
 - [x] Reintentos y fallos de red devuelven el control sin mezclar partidas.
 - [x] 68 comprobaciones automáticas y prueba real de API con dos sesiones independientes.
-- [ ] Revisión visual del despliegue 3.4.
+- [x] Revisión visual del despliegue 3.4: registro activo, formulario móvil y dimensiones de carga.
